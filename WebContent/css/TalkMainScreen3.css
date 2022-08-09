@@ -1,0 +1,1094 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500&display=swap');
+body {
+	margin: 0px;
+	font-family: "Noto Sans KR", sans-serif;
+}
+div, span, p {
+	letter-spacing: -1px;
+}
+p {
+	font-size: 14px;
+}
+b, strong {
+	font-weight: 400;
+}
+ul {
+ 	list-style-type: none; /* 마커/글머리 기호 제거 */ 
+    margin: 0;
+    padding: 0;   
+}
+div {
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+	font: inherit;
+	vertical-align: baseline;
+}
+textarea {
+	font-family: primary, secondary, -apple-system, BlinkMacSystemFont, AppleSDGothicNeo, "Noto Sans KR", "Helvetica Neue", Arial, sans-serif;
+    font-weight: 500;
+    font-size: 16px
+}
+a {
+	text-decoration:none;
+}
+textarea:focus {
+	outline: none;
+}
+.fl {
+	float: left;
+}
+.fr {
+	float: right;
+}
+#talkMainCt1 { /* 번개톡 페이지 div */ 
+	width: 100%;
+    height: 730px;
+    text-align: center; 
+    background-color: rgb(249, 249, 249);
+}
+
+#bungeTalkIcon {
+	cursor: pointer;
+}
+
+#talkMainCt2 { /* 번개톡 페이지2 div */
+	width:1024px;
+	height:100%;
+		margin: auto;  
+}
+#leftContainer {
+	width:50%;
+}
+.listTitleCt { /* 번개톡 목록 타이틀 전체div */ 
+	width:100%;
+	height:55px;
+	background-color: white;
+}
+.listTitleDiv1 { /* 번개톡 목록 타이틀 왼쪽div */
+	width: 33%;
+	height: 33px;
+		padding-top: 20px;  
+}
+.listTitleDiv2 { /* 번개톡 목록 타이틀 중앙div */ 
+	width: 33%;
+	height: 33px;
+	text-align:center;
+	font-size:20px; 
+		padding-top: 19px; 
+}
+.listDot1 { /* 번개톡 목록 타이틀 오른쪽div */
+	width: 34%;
+	height: 33px; 
+	text-align: right; 
+	cursor: pointer;	
+		padding-top: 12px;
+}
+.listCt1 { /* 번개톡 목록 리스트div */
+	width:100%;
+	height:675px;
+}	
+
+.inquiryModalBg {
+	position: absolute;
+	width: 512px;
+	height: 686px;
+	opacity: 0.3;
+	background-color: rgb(51, 51, 51);
+	display: none; 
+}
+
+.inquiryModalCt2 { /* 차단 상점 관리, 1:1문의하기 전체 div */
+	width: 512px;
+	height: 109px;
+	position: absolute; 
+	z-index: 1;
+/* 			top: 0px; */
+	background-color: rgb(255, 255, 255);
+	display: none;
+}
+.inquiryModalCt3 {
+	padding: 20px;
+}
+.storeManagement { /* 차단상점 관리 */
+	display: flex;
+	width: 472px;
+	height: 22px;
+	justify-content: space-between;
+	align-items: center;
+	cursor: pointer;
+}
+.storeManagement2 {
+	display: flex;
+	align-items: center;
+}
+.indiInquiry { /* 1대1 문의하기 */
+	display: flex; 
+	width: 472px;
+	height: 22px;
+	margin-top: 25px;
+	justify-content: space-between;
+	align-items: center;
+	cursor: pointer; 
+}
+.indiInquiry2 {
+	display: flex;
+	align-items: center;
+}
+
+.listUl { /* 번개톡 목록 리스트 */ 
+	width: 100%;
+    height: 685px;
+    background-color: rgb(244, 244, 250);
+    overflow-x: hidden; /* 가로축 스크롤바 숨기기 */
+    overflow-y: scroll; /* 세로축 스크롤바 생성 */ 
+}
+.cutListUl { /* 차단된 상점 목록 리스트 */
+	width: 100%;
+    height: 675px;
+    background-color: rgb(244, 244, 250);
+    overflow-x: hidden; /* 가로축 스크롤바 숨기기 */
+    overflow-y: scroll; /* 세로축 스크롤바 생성 */
+/* 		    display: none; */
+}
+.listContent1 { /*번개톡 목록 리스트 내용1*/
+	display: flex;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    cursor: pointer; /* 마우스를 올리면 커서모양이 손모양으로 변경 */
+}
+.listContent1:hover {
+	background-color: rgb(250, 250, 253);
+}
+.listContent2 { /* 번개톡 목록 리스트 내용2 */
+	width: 381px;
+	height: 39.19px;
+/* 			padding-left: 18px; */
+}
+.imgCt {
+	width: 82px;
+	height: 83px;
+}
+.listContent3 {
+	width: 381px;
+	height: 30px; 
+}
+.listNameFont { /* 번개톡 목록 리스트 상대닉네임 */
+	font-size: 16px;
+	color: rgb(30, 29, 41);
+}
+.listTimeFont { /* 번개톡 목록 리스트 마지막 채팅시간 */ 
+	font-size: 12px;
+    color: rgb(153, 153, 153);
+	
+}
+.listContent4 {
+	width: 381px;
+	height: 16px;
+}
+.listDot2 { /* 번개톡 목록 리스트 우측 div */ 
+	width: 32px;
+	height: 32px;
+	text-align: center;
+	 
+}
+.listMeIcon { /* '나'아이콘 */ 
+	background-color: rgb(195, 194, 204);
+    display: inline-block;
+    color: white;
+    width: 15px;
+    height: 15px;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 12px;
+    margin-right: 5px;
+}
+.listContentFont { /* 마지막 채팅내용 폰트 */
+	width: 300px;  	
+	font-size: 14px;
+	text-overflow: ellipsis;
+		overflow: hidden;  
+		white-space:nowrap; 
+		text-align:left;
+		color: rgb(102, 102, 102);
+}
+
+#cutListCt1 { /* 좌측화면  차단상점관리 전체 div */
+	position:relative;
+	width: 100%;
+	height: 675px;
+	background-color: rgb(244, 244, 250);
+}
+#cutTalkInfo { /* 차단된 대화목록이 없습니다 */
+	font-size: 16px; 
+	margin-top: 60%;
+	display:none; 
+}
+#cutManagementContainer {
+	width:50%;
+	height:100%;
+	display: none;
+}
+#cutManagementModalBg {
+	position: absolute;
+	width: 512px;
+	height: 675px;
+	opacity: 0.3;
+	background-color: rgb(51, 51, 51);
+	display: none; 
+}
+
+#rightContainer { /* 우측 안내문 전체 div */
+	position: relative;
+	width: 50%;
+	margin: auto;
+	background-color: rgb(244, 244, 250);
+}
+#rightInfoCt1 { /* 번개장터 우측 상단 div */
+	display: flex;
+	width: 512px;
+	height: 55px;
+	justify-content: space-between;
+	align-items: center; 
+	background-color: white;
+	
+	position: relative;
+	z-index: 5;
+}
+#rightInfoCt1_1 { /* 번개장터 우측 상단 좌측 div */
+	width: 120px;
+}
+#rightInfoCt1_2 { /* 번개장터 우측 상단 중앙 div */
+	display: flex;
+	text-align: center;
+	align-items: baseline;
+	cursor: pointer;
+}
+#rightInfoCt1_3 { /* 번개장터 우측 상단 우측 div */
+	width: 120px;
+	text-align: right;
+	margin-right: 0.5rem;
+	cursor: pointer;
+}
+
+#talkListBunModalCt { /* 번개장터 수신채팅목록 우측 아이콘 모달창 전체 div */
+	position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    display: none;
+}
+#talkListBunModalBg {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	opacity: 0.3;
+	z-index: 2;
+	background-color: rgb(51, 51, 51);
+}
+
+/* #talkListModalCt { 채팅목록 우측 아이콘 모달창 전체 div
+	position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    display: none;
+} */
+.talkListModalCt {
+	position: absolute;
+	top: 0px;
+	width: 1024px;
+	height: 730px;
+	display: none;
+}
+
+.talkListModalBg {
+	position: absolute;
+	width: 100%;
+	height: 741px;
+	top: 187px;
+	opacity: 0.3;
+	z-index: 5;
+	background-color: rgb(51, 51, 51);
+}
+.talkCutListModalCt {
+	position: absolute;
+	top: 0px;
+	width: 1024px;
+	height: 730px;
+	display: none;
+}
+.talkCutListModalBg {
+	position: absolute;
+	width: 100%;
+	height: 730px;
+	top: 187px;
+	opacity: 0.3;
+	z-index: 5;
+	background-color: rgb(51, 51, 51);
+}
+.listModalCt { /* 채팅목록 팝업 */
+	width: 80%;
+	position: absolute;
+	top: 73%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	max-width: 450px;
+	padding: 1rem;
+	z-index: 6;
+	background-color: rgb(255, 255, 255);
+}
+.listModalFont1 { /* 채팅목록 팝업 거래자 닉네임 */
+	font-size: 1.1rem;
+	font-weight: bold;
+}
+.listModalFont2Ct { /* 대화방알림, 차단, 신고, 대화방 나가기 전체 div */
+	line-height: 1.4;
+/* 	margin-top: 1.5rem; */
+}
+.listModalFont {
+	font-size: 15px;
+	padding: 1.2rem;
+	cursor: pointer;
+}
+.listModalFont:hover {
+	background-color: rgb(231, 234, 241);
+}
+#leftContainer>.listTitleCt>.listTitleDiv1>.listTitleDiv2>.listDot1 > svg:g {
+	fill:black;
+}
+
+
+
+#rightTalkFirstInfo { /* 번개톡 시작 안내문  */ 
+	position: absolute; 
+	width: 512px;
+	height: 137px;
+	text-align: center;
+	background-color: rgb(255, 255, 255);
+	display: block; 
+}
+#rightTalkFirstInfoT1 {
+	padding-top: 1.5rem;
+	margin: 0; 
+	text-align: center;
+	font-size: 15px;
+}
+#rightTalkFirstInfoT2 {
+	text-align: center;
+	font-size: 16px;
+	margin-top: 5px;
+	color: rgb(219, 105, 0);  
+}
+#rightTalkFirstInfoICt { /* 주요 사기 패턴 알아보기 */
+	display: inline-block;
+	width: 149.53px;
+	height: 27px;
+	border-radius: 0.5rem;
+	border: 1px solid rgb(220, 219, 228);
+	border-radius: 0.5rem;
+	margin-top: 20px;
+}
+#rightTalkFirstInfoI { /* 주요 사기 패턴 알아보기 */
+	display: inline-block;
+	width: 149.53px;
+	padding-top: 6px;			
+	font-size: 13px;
+	color: #1E1D29;
+	cursor: pointer;
+}
+#closeB {
+	position: absolute; 
+	top: 25px; 
+	right: 20px; 
+	width: 16px; 
+	cursor: pointer;
+}
+
+/* 선택된 상품창*/
+#selectedProductCt {
+	position: absolute;
+	width: 512px;
+	height: 21px;
+	font-size: 14px;
+	background-color: rgb(255, 255, 255);
+	display: block;
+}
+#selectedProductImage {
+	margin-left: 15px;
+	width: 20px;
+	height: 20px;
+}
+#selectedProductName {
+	margin-left: 15px;
+	color: grey;
+}
+#selectedProductPrice {
+	margin-left: 10px;
+}
+
+
+.rightNameModalBg { /* 번개톡 우측 상단 닉네임 선택시의 모달창 background  */ 
+	position: absolute; 
+	width: 512px;
+	height: 686px;
+	background-color: black;
+	opacity: 0.3; 
+	z-index: 5;
+	display: none;
+}
+.rightNameModal1 { /* 번개톡 우측 상단 닉네임 선택시의 모달창 전체 div */
+	position: absolute; 
+	width: 512px;
+	height: 232px;
+	background-color: white;
+	z-index: 5;
+	display: none;
+}
+.rightNameModalList1 {
+	padding: 8px 0px;
+}
+.rightNameModalList1_1 {
+	display: flex;
+	height: 40px;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0px 24px;
+}
+.rightNameModalList1_1L {
+	display: flex;
+	width: 72px;
+	justify-content: left;
+	font-size: 15px;
+	margin-right: 1rem;
+	color: rgb(155, 153, 169);
+}
+.rightNameModalList1_1C {
+	display: flex;
+	width: 100%;
+	justify-content: left;
+	font-size: 15px;
+}
+.rightNameModalList1_1C svg + svg {
+	margin-left: 3px;
+}
+.rightNameModalList1_1R {
+	width: 18px;
+	cursor: pointer;
+}
+#rightNameModalButtonCt { /* 사기 신고 조회 버튼, 상점 바로가기 버튼 전체 div */
+	display: flex;
+	height: 56px;
+}
+#rightNameModalButtonCt form {
+	width: 50%;
+}
+#rightNameModalButtonL { /* 사기 신고 조회 버튼 */
+	display: flex;
+	width: 50%;
+	height: 100%;
+	justify-content: center;
+	align-items: center;	
+	color: rgb(255, 80, 88);;
+	font-size: 16px;
+	font-weight: bold;
+	border: none;
+	background-color: rgb(255, 255, 255);
+	cursor: pointer;
+}
+#rightNameModalButtonR { /* 상점 바로가기 버튼 */
+	display: flex;
+	width: 50%;
+	height: 100%;
+	justify-content: center;
+	align-items: center;	
+	color: rgb(255, 255, 255);
+	font-size: 16px;
+	font-weight: bold;
+	border: none;
+	background-color: rgb(255, 80, 88);
+	cursor: pointer;
+}
+
+/* 채팅창 +아이콘 선택시 모달창_상품선택, 사진선택*/
+#chatModalCt1 {
+	bottom: 1px;
+	width: 512px;
+	height: 101px;
+	background-color: rgb(255, 255, 255);
+	display: none;
+}
+#chatModalCt2 {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	background-color: rgb(255, 255, 255);
+	padding-top: 17px;
+}
+.chatModalIconCt {
+	display: flex;
+	width: 46px;
+	height: 46px;
+	justify-content: center;
+	align-items: center;
+	border-radius: 3px;
+	background-color: rgb(244, 244, 250);
+	cursor: pointer;
+}
+.chatModalIconFont {
+	text-align: center;
+	font-size: 12px;
+	color: rgb(76, 76, 76);
+}
+
+/* 상품선택 모달창 */
+.storeSelectBg {
+	position: absolute;
+	background-color: black;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0.4;
+		display: none; 
+}
+.storeSelectCt {
+	position: absolute;
+	background-color: white;
+	border-radius: 15px 15px 0px 0px;
+	width: 100%;
+	height: 192.36px;
+	bottom: 0;
+	display: none;
+}
+.storeSelectTitle {
+	font-weight: bold;;
+	font-size: 18px;
+	padding: 1rem;
+	text-align: center;
+}
+.storeSelectName {
+	text-align: center;
+	padding: 1rem;
+	font-size: 15px;
+	font-weight: bold;
+	cursor: pointer;
+	border: none;
+	background: none;
+}
+
+/* 상대방 상점 선택 */
+#otherProductSelectCt {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgb(255, 255, 255);
+	z-index: 5;
+	
+			display: none;  
+}
+
+/* 내 상점 선택 */
+#myProductSelectCt {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgb(255, 255, 255);
+	z-index: 5;
+	
+			display: none;  
+}
+.productSelectTitle {
+	display: flex;
+	align-items: center;
+	height: 50px;
+	margin: 0px 10px;
+	cursor: pointer;
+}
+.backIconCt {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 40px;
+	height: 40px;
+	transform: rotate(-90deg);
+}
+.productSelectTitleFont {
+	font-weight: bold;
+	font-size: 18px;
+	margin-left: 2px;
+}
+.productScrollCt {
+	width: 100%;
+	height: 680px;
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+.productSelectOptionCt {
+	position: relative;
+    border-top: 1px solid rgb(238, 238, 238);
+    border-bottom: 1px solid rgb(238, 238, 238);
+    font-size: 13px;
+    position: sticky;
+    top: 0px;
+    background-color: white;
+    height: 50px;
+}
+.productCountL {
+	margin: 15px;
+}
+.productSelectOption {
+	height: 50px;
+    border: 1px solid rgb(238, 238, 238);
+}
+.productsCt1 {
+	display: flex;
+	padding: 10px 10px 70px;
+	flex-wrap: wrap;
+}
+.productsCt2 {
+	width: 155px;
+	height: auto;
+	margin: 10px 0px;
+	border: none;
+	background-color: rgb(255, 255, 255);
+	cursor: pointer;
+}
+.productImageCt { /* 상품 사진 div */
+	width: 145px;
+	height: 145px;
+	margin-left: 5px;
+	border-radius: 5px;
+}
+.productImageSize {
+	width: 145px;
+	height: 145px;	
+}
+.productPriceCt { /* 상품 가격 div */
+	margin: 10px 10px 0px;
+	font-size: 16px;
+}
+.productNameCt { /* 상품이름 div */
+	margin: 10px 10px 0px;
+	font-size: 13px;
+	color: rgb(114, 112, 127);
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.productsCt2::nth-child(3n+0) {
+	margin-right: 0;
+}
+
+/* 내 상점 선택 */
+.myProductSelectCt {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 5;
+}
+
+/* 번개톡 우측 상단 아이콘 선택시의 모달창 */
+#rightNameModalSalesDetailsCt {
+	position: absolute;
+	width: 1024px;
+	height: 741px;
+	display: none;
+}
+.rightNameModalSalesDetailsBg {
+	position: absolute; 
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	opacity: 0.3; 
+	z-index: 5;
+}
+.rightNameModalSalesDetailsCt_1 {
+	position: absolute;
+		width: 428px;
+	height: 297.59px;
+	top: 200px;
+	left: 288px;
+	background-color: rgb(255, 255, 255);
+	padding: 1rem;
+	text-align: center;
+	z-index: 5;
+}
+.rightNameModalSalesDetailsTitle {
+	font-size: 1.1rem;
+}
+.rightNameModalSalesDetailsContentCt1 {
+	margin-top: 1.5rem;
+	padding: 8px;
+}
+.rightNameModalSalesDetailsContentCt2 {
+	display: flex;
+	height: 40px;
+	line-height: 1.4;
+	padding: 0px 1.5rem;
+	justify-content: space-between;
+	align-items: center;
+}
+.rightNameModalSalesDetailsContentFontL {
+	font-size: 15px;
+	margin-right: 1rem;
+	min-width: 55px;
+	color: rgb(155, 153, 169);
+}
+.rightNameModalSalesDetailsContentFontR {
+	width: 100%;
+	font-size: 16px;
+	overflow: hidden;
+}
+.rightNameModalSalesDetailsContentButton {
+	width: 100%;
+	color: rgb(255, 255, 255);
+	background-color: rgb(255, 80, 88);
+	text-align: center;
+	padding: 1rem;
+	margin-top: 30px;
+	font-size: 1rem;
+	font-weight: bold;
+	border: none;
+	cursor: pointer;
+}
+
+.rightName3DotIconModalBg { /* 번개톡 우측 상단 아이콘 선택시의 모달창 background  */ 
+	position: absolute; 
+	width: 512px;
+	height: 686px;
+	background-color: black;
+	opacity: 0.3; 
+	z-index: 5;
+	display: none;
+}
+.rightName3DotIconModal1 { /* 알림끄기, 신고, 신고조회, 차단, 나가기 전체 div */
+	position: absolute; 
+	width: 512px;
+	height: 77px;
+	background-color: white;
+	z-index: 5;
+	display: none;
+}
+.rightName3DotIconModal2 {
+	display: flex;
+	padding: 1rem;
+}
+.rightName3DotIconsCt { /* 알림 끄기, 신고, 신고조회, 차단, 나가기  div */
+	width: 96px;
+	height: 45px;
+	text-align: center;
+	cursor: pointer;
+}
+.rightName3DotIconFont { /* 알림 끄기, 신고, 신고조회, 차단, 나가기 폰트 */
+	font-size: 13px;
+	font-weight: bold;
+	margin-top: 10px;
+}
+.rightInfoCt2 { /* 채팅 내용 전체 div */
+	width: 100%;
+	height: 573px;
+	overflow-x: hidden; /* 가로축 스크롤바 숨기기 */
+    overflow-y: scroll; /* 세로축 스크롤바 생성 */
+}
+.rightInfoCt2_1 { 
+	height: 100%;
+	margin: auto 16px 0px;
+	line-height: 1.4; 
+}
+.rightInfoCtDate { /* 날짜 전체 div */
+	display: flex;
+	justify-content: space-between; 
+	font-size: 15px;
+	margin: 16px 0 0 0; 
+	align-items: center; 
+}
+.rightInfoCtDateFont { /* 날짜 폰트 */
+	display: flex;
+	padding: 0px 10px;
+/* 			z-index: 1; */
+	justify-content: center;
+	align-items: center; 
+	background-color: rgb(244, 244, 250);
+	font-size: 12px;
+	color: rgb(195, 194, 204);
+}
+.rightInfoCtLine { /* 날짜 양쪽 실선 */
+	width: 170px;
+	height: 0px;
+	border: 1px solid rgb(234, 233, 241);
+}
+.rightInfoCt2_2 {
+	width: 100%;
+	height: 140px;
+	margin: 8px 0;
+}
+.rightInfoCtIcon { /* 번개 아이콘 전체 div */
+	width: 40px;
+	height: 100%;
+}
+.rightInfoCtGuide1 { /* 번개톡 가이드 전체 div */
+	height: 125px;
+	padding: 8px;
+	margin-top: 17px;
+	border-radius: 0.5rem 1rem 0.5rem 0.5rem;
+	background-color: rgb(255, 255, 255);  
+}
+.font1_1 { /* 첫 번개톡을 축하드려요 폰트 */
+	display: flex;
+	width: 100%;
+	height: 37px;
+	font-size: 15px; 
+	justify-content: space-between; 
+	align-items: center; 
+}
+.font1_2 { /* 번개톡에 대해 알고 있으면 유용한 팁과 주의사항을 함께 알아볼까요? 폰트 */
+	display: flex;
+	width: 100%;
+	height: 37px;
+	font-size: 15px;
+	align-items: center;
+	font-weight: 150;
+}
+.rightInfoCtGuide2 { /* 안전결제 번개페이 전체 div */
+	height: 144px;
+	padding: 8px;
+	margin-top: 17px;
+	border-radius: 0.5rem 1rem 0.5rem 0.5rem;
+	background-color: rgb(255, 255, 255);  
+}
+.font2_1 { /* 사기 위험 제로! 안전결제란?, 잠자는 물건, 번개장터에 한번 팔아볼까요? 폰트 */
+	display: flex;
+	width: 100%;
+	height: 37px;
+	font-size: 15px; 
+	justify-content: space-between; 
+	align-items: center; 
+}
+.font2_2 { /* 중고거래에서 가장 중요한건 안전!, 지금 집에서 잠자고 있는 물건이 있다면.. 폰트 */
+	display: flex;
+	width: 100%;
+	height: 42px;
+	font-size: 15px;
+	font-weight: 150;
+	text-align: left;
+	align-items: center;
+}
+.rightInfoCtTime { /* 시간 */
+	height: 14px;
+	font-size: 10px;
+	color: rgb(178, 178, 178);
+	margin: 8px 0 10px 0; 
+}
+.guideButton {
+	width: 447px;
+	height: 41px; 
+	font-size: 15px;
+	border-radius: 4px; 
+	margin-top: 10px;
+	color: rgb(30, 29, 41);
+	background-color: rgb(244, 244, 250);
+	border: none;
+	cursor: pointer;
+}
+.chatInputCt1 { /* 채팅 입력란 div */
+	position: relative;
+	width:100%;
+	height: 101px;  
+	background-color: rgb(255, 255, 255);
+}
+.chatInputCt2 { /* 계좌보내기, 배송지보내기, 직거래 약속 전체 div */
+	display: flex;
+	width: 100%;
+	height: 40px;
+	justify-content: center;
+	align-items: center;
+	font-size: 14px;
+	color: rgb(102, 102, 102);
+}
+.chatInputCt2_1 {
+	display: flex;
+	width: calc(50%);
+	height: 14px;
+	justify-content: center;
+	align-items: center;
+	margin: 13px 0;
+	cursor: pointer;
+}
+.chatInputCt2_1 > button {
+	border: none;
+	background-color: rgb(255, 255, 255);
+	cursor: pointer;
+}
+.chatInputCt2_2 {
+	display: flex;
+	width: calc(100%);
+	height: 14px;
+	justify-content: center;
+	align-items: center;
+	margin: 13px 0;
+}
+
+.dealingInfoCt {
+	display: flex;
+	width: 454px;
+	height: 42px;
+	margin: 15px 30px;
+	justify-content: center;
+	align-items: center; 
+	border-radius: 20px;
+	letter-spacing: -0.5px;
+	color: rgb(170, 170, 170);
+	background-color: rgb(244, 244, 250);
+}
+/* 채팅 입력창 */
+.chatInputCt3 {
+	display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    margin: 8px 20px 8px 5px;
+}
+.plusIconCt { /* + 아이콘 div */
+	display: flex;
+	width: 45px;
+	height: 45px;
+	justify-content: center;
+	align-items: center; 
+	margin: 0px;
+	cursor: pointer;
+}
+.chatInput {
+	position: relative;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    height: 40px;
+    background-color: rgb(244, 244, 250);
+    border-radius: 24px;
+    width: 100%;
+}
+.chatInfoTextCt {
+	display: flex;
+	height: 45px;
+	justify-content: center;
+	align-items: center;
+	color: grey;
+}
+.chatInput textarea {
+	appearance: none;
+    outline: none;
+    border: none;
+    line-height: 1.2;
+    background: transparent;
+    width: 100%;
+    letter-spacing: -0.5px;
+    overflow-y: hidden;
+    padding: 13px 0px 13px 16px;
+    resize: none;
+    box-sizing: border-box;
+}
+.chatInputBoxReceive { /* 받는 채팅내용 */
+	display: inline-block;
+	max-width: 350px;
+	margin: 0px;
+	padding: 5px 10px 5px 10px;
+	border-radius: 20px;
+	color: white;
+	background-color: rgb(255, 80, 88);
+}
+.chatInputBoxSend { /* 보내는 채팅내용 */
+	display: inline-block;
+	max-width: 350px;
+	margin: 0px;
+	padding: 5px 10px 5px 10px;
+	border-radius: 20px;
+	color: black;
+	background-color: rgb(255, 255, 255);
+}
+.infoChatReceive{ /* 정보 받기 div */
+	display: inline-block;
+	width: 185px;
+	padding: 8px;
+	margin-top: 17px;
+	border-radius: 0.5rem 1rem 0.5rem 0.5rem;
+	color: rgb(255, 255, 255);
+	background-color: rgb(255, 80, 88);  
+}
+.infoChatSend{ /* 정보 보내기 div */
+	display: inline-block;
+	width: 185px;
+	padding: 8px;
+	margin-top: 17px;
+	border-radius: 0.5rem 1rem 0.5rem 0.5rem;
+	background-color: rgb(255, 255, 255);  
+}
+.infoChatCheckButton {
+	width: 185px;
+	height: 41px; 
+	font-size: 15px;
+	border-radius: 4px; 
+	text-align: center;
+	margin-top: 10px;
+	color: rgb(30, 29, 41);
+	background-color: rgb(244, 244, 250);
+	border: none;
+	cursor: pointer;
+}
+.chatInput textarea::placeholder {
+	font-size: 13px;
+	font-weight: bold;
+	color: rgb(218, 218, 218);
+}
+.imoticonCt {
+	padding: 15px 15px 13px;
+}
+.chatDivCt { /* 채팅틀 */
+	width: 210px;
+	padding: 8px;
+	margin-top: 17px;
+	border-radius: 0.5rem 1rem 0.5rem 0.5rem;
+}
+
+.uploadSendCt { /* 사진 업로드 div */
+	width: 250px;
+}
+
+.infoPhotoUpload { /* 사진 업로드 보내기 */
+	display: flex;
+	width: 100%;
+	height: 100%;
+	justify-content: center;
+	align-items: center;
+	padding: 8px;
+	border-radius: 1rem;
+}
+
+.infoGetPhoto { /* 사진 업로드 받기 */
+	display: flex;
+	width: 100%;
+	height: 100%;
+	justify-content: center;
+	align-items: center;
+	padding: 8px;
+	border-radius: 1rem;
+}
+
+.chatReceiveCt { /*받은채팅*/
+	/* float: left; */
+}
+
+.chatSendCt {/*보낸채팅*/
+	float: right;
+}

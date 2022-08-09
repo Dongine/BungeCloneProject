@@ -1,0 +1,84 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ page import="java.sql.*" %>
+<%@ page import="java.util.*" %>
+<%@ page import="com.bunge.dao.*" %>
+<%@ page import="com.bunge.dto.*" %>
+<%@ page import="com.bunge.util.*" %>
+
+<%
+		ProductDao productDao2 = new ProductDao();
+		int pno = 0;
+		try {
+			pno = Integer.parseInt(request.getParameter("productnumber_pk"));
+		} catch(Exception e) { }
+		String img = productDao2.getImagenameByProductNumber(pno);
+		
+		RecentlyDto[] arrRecently2 = new RecentlyDto[3];
+
+		// 쿠키값 가져오기
+		Cookie[] cookies = request.getCookies() ;
+		for(int i=0; i<=arrRecently2.length-1; i++) {
+			arrRecently2[i] = new RecentlyDto();
+		}
+		if(cookies != null){
+			for(int i=0; i < cookies.length; i++){
+				Cookie c = cookies[i] ;
+				String cName = c.getName();		// recently_pno_1 ~ 3 그리고 recently_img_1 ~ 3
+				String cValue = c.getValue() ;
+				if(cName.contains("recently_pno")) {
+					int idx = Integer.parseInt(cName.substring(cName.length()-1))-1;
+					arrRecently2[idx].setPno(Integer.parseInt(cValue));
+				}
+				else if(cName.contains("recently_img")) {
+					int idx = Integer.parseInt(cName.substring(cName.length()-1))-1;
+					arrRecently2[idx].setImg(cValue);
+				}
+			}
+		}
+
+		if(arrRecently2[0].getPno()==pno ||
+				arrRecently2[1].getPno()==pno ||
+				arrRecently2[2].getPno()==pno) {
+			 if(arrRecently2[2].getPno()==pno) {
+				int tempPno = pno;
+				String tempImg = arrRecently2[2].getImg();
+				arrRecently2[2].setImg( arrRecently2[1].getImg() );
+				arrRecently2[2].setPno( arrRecently2[1].getPno() );
+				arrRecently2[1].setImg( arrRecently2[0].getImg() );
+				arrRecently2[1].setPno( arrRecently2[0].getPno() );
+				arrRecently2[0].setImg( tempImg );
+				arrRecently2[0].setPno( tempPno );
+			 } else if(arrRecently2[1].getPno()==pno) {
+					int tempPno = pno;
+					String tempImg = arrRecently2[1].getImg();
+					arrRecently2[1].setImg( arrRecently2[0].getImg() );
+					arrRecently2[1].setPno( arrRecently2[0].getPno() );
+					arrRecently2[0].setImg( tempImg );
+					arrRecently2[0].setPno( tempPno );
+			 }
+		} else {
+			if(arrRecently2[1].getImg()!=null) {
+				arrRecently2[2].setImg( arrRecently2[1].getImg() );
+				arrRecently2[2].setPno( arrRecently2[1].getPno() );
+			}
+			if(arrRecently2[0].getImg()!=null) {
+				arrRecently2[1].setImg( arrRecently2[0].getImg() );
+				arrRecently2[1].setPno( arrRecently2[0].getPno() );
+			}
+			arrRecently2[0].setImg( img );
+			arrRecently2[0].setPno( pno );
+		}
+		
+	
+		for(int i=0; i<=2; i++) {
+			Cookie c = new Cookie("recently_pno_"+(i+1), arrRecently2[i].getPno()+"") ;
+			c.setMaxAge(30 * 60*60*24) ;
+			response.addCookie(c) ;			
+			
+			c = new Cookie("recently_img_"+(i+1), arrRecently2[i].getImg()+"") ;
+			c.setMaxAge(30 * 60*60*24) ;
+			response.addCookie(c) ;
+		}
+
+%>

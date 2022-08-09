@@ -1,0 +1,141 @@
+<link rel="shortcut icon" href="images/favicon.ico">
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>번개장터 고객센터</title>
+	<script src="js/jquery-3.6.0.min.js"></script>
+	<link rel="stylesheet" href="css/TM_NOTICE.css"/>
+	<script>
+		function c1(){
+			if ($('#1').css('display')=='block') {
+				$('#2').css('display','none');
+				$('#3').css('display','none');
+				$('#btn1').css('color','#00a587');
+			} else if ($('#1').css('display') == 'none') {
+				$('#1').css('display','block');
+				$('#2').css('display','none');
+				$('#3').css('display','none');
+				$('#btn1').css('color','#00a587');
+				$('#btn2').css('color','#b2b2b2');
+				$('#btn3').css('color','#b2b2b2');
+			} 
+		}
+		function c2(){
+			if ($('#2').css('display') == 'block' ) {
+				$('#1').css('display','none');
+				$('#3').css('display','none');
+			} else if ($('#2').css('display') == 'none') {
+				$('#1').css('display','none');
+				$('#2').css('display','block');
+				$('#3').css('display','none');
+				$('#btn2').css('color','#00a587');
+				$('#btn1').css('color','#b2b2b2');
+				$('#btn3').css('color','#b2b2b2');
+			} 
+		}
+		function c3(){
+			if ($('#3').css('display') == 'block' ) {
+				$('#2').css('display','none');
+				$('#1').css('display','none');
+				$('#color3').css('color','#00a587');
+			} else if ($('#3').css('display') == 'none') {
+				$('#1').css('display','none');
+				$('#2').css('display','none');
+				$('#3').css('display','block');
+				$('#btn3').css('color','#00a587');
+				$('#btn2').css('color','#b2b2b2');
+				$('#btn1').css('color','#b2b2b2');
+			} 
+		}
+		$(function(){
+			$('#move').click(function(){
+				location.href="Controller?command=GoCenter";
+			})
+		})
+	</script>
+</head>
+<body>
+	<div class="main">
+		<div class="main flex tl" style="width:640px;height:50px;">
+		<img id="move"src=images/TM_LEFT.svg width="20px"height="20px"style="margin-left:13px">
+		</div>
+		<div class="main tl box">
+			<div class="fl font28 width">
+				공지사항
+			</div>
+			<div class="fl width box2">
+				<button class="fl font14 box2-1"onclick="c1()"id="btn1">
+					일반
+				</button>
+				<button class="fl font14 box2-1"onclick="c2()"id="btn2">
+					정책변경
+				</button>
+				<button class="fl font14 box2-1"onclick="c3()"id="btn3">
+					사기방지
+				</button>
+			</div>
+			<div id="1" class="fl width box3">	
+				<div class="fl width box3-1">	<!-- 공지글 하나 -->
+					<a href="Controller?command=GoNotice_1"><!-- TM_NOTICE/1.html -->
+						<div class="fl width box3-2 font16">
+							[공지]번개장터 사이트 오픈
+						</div>
+					</a>
+					<div class="fl width font12"style="margin-top:10px">
+						2022.06.10
+					</div>
+				</div>
+				<div class="fl width box3-1">	<!-- 공지글 하나 -->
+					<div class="fl width box3-2 font16">
+						[공지]테스트
+					</div>
+					<div class="fl width font12"style="margin-top:10px">
+						2022.06.10
+					</div>
+				</div>
+			</div>
+			<div id="2" class="fl width box3 hidden">	
+				<div class="fl width box3-1">	<!-- 공지글 하나 -->
+					<a href="Controller?command=GoNotice_1">
+						<div class="fl width box3-2 font16">
+							[공지]번개장터 정책 공지
+						</div>
+					</a>
+					<div class="fl width font12"style="margin-top:10px">
+						2022.06.10
+					</div>
+				</div>
+				<div class="fl width box3-1">	<!-- 공지글 하나 -->
+					<div class="fl width box3-2 font16">
+						[공지]번개장터 정책 공지
+					</div>
+					<div class="fl width font12"style="margin-top:10px">
+						2022.06.10
+					</div>
+				</div>
+			</div>
+			<div id="3" class="fl width box3 hidden">	
+				<div class="fl width box3-1">	<!-- 공지글 하나 -->
+					<a href="Controller?command=GoNotice_1">
+						<div class="fl width box3-2 font16">
+							[공지]사기 주의
+						</div>
+					</a>
+					<div class="fl width font12"style="margin-top:10px">
+						2022.06.10
+					</div>
+				</div>
+				<div class="fl width box3-1">	<!-- 공지글 하나 -->
+					<div class="fl width box3-2 font16">
+						[공지]테스트2
+					</div>
+					<div class="fl width font12"style="margin-top:10px">
+						2022.06.10
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

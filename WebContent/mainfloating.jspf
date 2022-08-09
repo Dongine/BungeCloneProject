@@ -1,0 +1,113 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ page import="java.sql.*" %>
+<%@ page import="java.util.*" %>
+<%@ page import="com.bunge.dao.*" %>
+<%@ page import="com.bunge.dto.*" %>
+<%@ page import="com.bunge.util.*" %>
+
+<%!
+	JjimCountDao jDao = new JjimCountDao();
+	ProductDao productDao = new ProductDao();
+
+	RecentlyDto[] arrRecently = new RecentlyDto[3];
+
+	public void loadRecentlyFromCookies(HttpServletRequest request) {
+		// 쿠키값 가져오기
+		Cookie[] cookies = request.getCookies() ;
+		for(int i=0; i<=arrRecently.length-1; i++) {
+			arrRecently[i] = new RecentlyDto();
+		}
+		if(cookies != null){
+			for(int i=0; i < cookies.length; i++){
+				Cookie c = cookies[i] ;
+				String cName = c.getName();		// recently_pno_1 ~ 3 그리고 recently_img_1 ~ 3
+				String cValue = c.getValue() ;
+				if(cName.contains("recently_pno")) {
+					int idx = Integer.parseInt(cName.substring(cName.length()-1))-1;
+					arrRecently[idx].setPno(Integer.parseInt(cValue));
+				}
+				else if(cName.contains("recently_img")) {
+					int idx = Integer.parseInt(cName.substring(cName.length()-1))-1;
+					arrRecently[idx].setImg(cValue);
+				}
+			}
+		}
+//		System.out.println("<<<nffur>>>");
+//		for(int i=0; i<=2; i++) {
+//			System.out.println(arrRecently[i].getPno() + " / " + arrRecently[i].getImg());
+//		}
+	}
+
+%>
+<%
+	/* Cookie c = new Cookie("recently_pno_1", "11") ;
+	c.setMaxAge(30 * 60*60*24) ;
+	response.addCookie(c) ;
+
+	Cookie c2 = new Cookie("recently_pno_2", "12") ;
+	c2.setMaxAge(30 * 60*60*24) ;
+	response.addCookie(c2) ;
+
+	Cookie c3 = new Cookie("recently_pno_3", "13") ;
+	c3.setMaxAge(30 * 60*60*24) ;
+	response.addCookie(c3);
+	
+	Cookie cImg = new Cookie("recently_img_1", "uni_min.png") ;
+	cImg.setMaxAge(30 * 60*60*24) ;
+	response.addCookie(cImg) ;
+
+	Cookie c2Img = new Cookie("recently_img_2", "cp_min.png") ;
+	c2Img.setMaxAge(30 * 60*60*24) ;
+	response.addCookie(c2Img) ;
+
+	Cookie c3Img = new Cookie("recently_img_3", "nikebig_min.png") ;
+	c3Img.setMaxAge(30 * 60*60*24) ;
+	response.addCookie(c3Img); */
+	
+	loadRecentlyFromCookies(request);
+	//addRecentlyToCookies(request, 1, productDao.getImagenameByProductNumber(1));
+
+	//String NICKNAME_PK2 = (String)(session.getAttribute("NICKNAME_PK"));
+
+%>
+
+<!-- 리모콘 -->
+<div class="JS_remocon" style="position:fixed !important;">
+	<div class="fl JS_box1">
+		<div class="fl JS_font1">찜한상품</div>
+		<div class="fl JS_font2"><img src="images/HEART.png"width="9px"height="9px"><%=jDao.getJjimcount(NICKNAME_PK)%></div>
+	</div>
+	<div class="fl JS_BOX2">
+		<div class="fl JS_font1">최근본상품</div>
+		<div class="fl JS_font4">
+			<div class="fl JS_font4-1"></div>
+		</div>
+		<div id="div_js_img" class="fl">
+		<%
+			for(int i=0; i<=2; i++) {			
+				if(arrRecently[i].getImg()==null)
+					break;
+		%>
+			<a class="fl JS_img" href="product.jsp?productnumber_pk=<%=arrRecently[i].getPno()%>"><img src="images/<%=arrRecently[i].getImg()%>" width="66px"height="66px"/></a>
+		<%		
+			}
+		%>	
+		</div>
+		<!-- <div class="fl width">
+			<button class="fl btn"><img src="images/left.png"width="5px"height="9px"></button>
+			<div class="fl JS_font5">1/1</div>
+			<button class="fl btn"><img src="images/right.png"width="5px"height="9px"></button>
+		</div> -->
+	</div>
+	<div class="fl JS_box3">
+		<div class="fl JS_font6 width">앱 다운로드</div>
+		<div class="fl QR">
+			<img src="images/TM_QR.png"width="100%"height="100%"/>
+		</div>
+	</div>
+	<div class="fl JS_box4">
+		<button class="btn2"id="btn7">TOP</button>
+	</div>
+</div> 
+<!-- //리모콘 -->

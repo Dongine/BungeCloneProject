@@ -1,0 +1,140 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500&display=swap');
+body {
+	margin: 0px;
+}
+input[type="checkbox"]{
+	width: 20px;
+	height: 20px;
+	cursor: pointer;
+}
+div, span, h1, h2, input {
+	font-family: "Noto Sans KR";
+}
+input {
+	height: 20px;
+	border: none;
+}
+.fl {
+	float: left;
+}
+.fr {
+	float: right;
+}
+.bold {
+	font-weight: bold;
+}
+#addressAddCt1 { /*주소추가 div*/ 
+	width: 100%;
+    height: 955px;
+    text-align: center; 
+}
+#addressAddCt2 { /*주소추가 div2*/
+	width: 680px;
+	height: 100%;
+	margin: auto;
+}
+#addressAddCt3 { /*주소추가 상단div*/
+	display: flex;
+	height: 50px;
+	padding: 0px 20px;
+	align-items: center;
+}
+#addressAddCt4 {
+		width: 100%; 
+	height: 910px;
+	overflow-x: hidden; /*x축 스크롤바 숨기기*/
+	overflow-y: scroll; /*y축 스크롤바 생성*/ 
+	position: relative;
+}
+#addressAddCt5 { /*주소 추가 타이틀 div*/
+	width: 100%;
+	height: 67px;
+}
+#addressAddCt5Font { /*주소 추가 타이틀 폰트*/
+	padding-left: 22px;
+	font: Noto Sans KR; 
+	font-size: 27px;
+	line-height: 1.21; 
+}
+#addressAddCt6 { /*이름, 휴대폰번호, 주소, 상세주소 div*/
+	height: 360px;
+	margin: auto; 
+}
+.writeCt { /*작성 div*/
+	height: 62px;
+	margin-top: 20px;
+	margin-left: 22px;
+	margin-right: 22px;
+	border-bottom: 1px solid rgb(204, 204, 204);
+}
+#addressFindCt { /*주소찾기 div*/
+	height: 62px;
+	margin-top: 20px;
+	margin-left: 22px;
+	margin-right: 22px;
+	cursor: pointer;
+	border-bottom: 1px solid rgb(204, 204, 204);
+}
+#inputAddressTextName { /*이름 입력*/
+	width: 97%;
+	height: 59px;
+	border: none;
+}
+#inputAddressTextPhone { /*휴대폰번호 입력*/
+	width: 97%;
+	height: 59px;
+	border: none;
+}
+#inputAddressTextAddress { /*주소입력*/
+	width: 97%;
+	height: 59px;
+	border: none;
+}
+#inputAddressTextDetailAddress { /*상세주소 입력*/
+	width: 97%;
+	height: 59px;
+	border: none;
+}
+.contentFont { /*이름, 휴대폰번호, 주소, 상세주소 폰트*/
+	font-size: 15px;
+} 
+#baseAddressCheckCt { /*기본주소로 설정 전체 div*/
+	display: flex;
+	width: 150px; 
+	align-items: center;
+	margin: 10px 0px 0px 22px;
+	cursor: pointer;
+}
+#baseAddressCheck { /*기본주소로 설정*/
+	font-size: 16px;
+}
+input::-webkit-input-placeholder { /*placeholder글자색 변경*/ 
+	font-weight: bold; 
+	color: rgb(189, 189, 189);  
+}
+#done { /*완료 전체 div*/
+	width: 680px;
+	height: 91.19px;
+		position: absolute;
+  		position: fixed;
+	bottom: 0;
+	background-color: rgb(255, 255, 255);
+}
+#doneAddressButtonCt { /*완료 버튼 div*/
+	margin: 20px;
+	height: 50px;
+	background-color: rgb(251, 231, 232);
+	border-radius: 5px;
+	cursor: auto;
+}
+#doneAddressButton { /*완료 버튼 */
+	width: 100%;
+	height: 100%;
+	left: 50%; 
+	top: 30%;
+	font-size: 15px;
+	border: none;
+	background-color: inherit;
+	color: rgb(255, 255, 255);
+}

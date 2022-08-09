@@ -1,0 +1,119 @@
+@charset "UTF-8";
+body {
+	margin: 0px;
+}
+textarea::-webkit-input-placeholder { /*placeholder글자색 변경*/
+	font-size: 14px; 
+	color: rgb(155, 153, 169);
+	border: none;  
+	font-family: AppleSDGothicNeo-Regular; 
+}
+#cancelCt1 { /* 취소하기 전체 div */
+	width: 100%;
+	height: 960px;
+	background-color: rgb(237, 237, 237);
+}
+#cancelCt1_1 { /* 취소하기 전체 흰배경 div */
+	width: 100%;
+	height: 300px;
+	background-color: white;
+} 
+#cancelCt2 { /* 취소하기 상단 div */
+	display: flex;
+	height: 53px;
+	border-bottom: 2px solid rgb(237, 237, 237); 
+}
+#cancelCt2Left { /* 취소하기 왼쪽 div */
+	display: flex;
+	width: 100%;
+	height: 100%; 
+}
+#cancelCt2LeftFont { /* 취소하기 폰트 */
+	display: flex;
+	align-items: center;
+	margin-left: 9px;
+	font-size: 16px;
+	color: rgb(33, 33, 33);
+}
+#cancelCt2Right { /*취소하기 오른쪽(닫는버튼) div*/
+	display: flex;
+	align-items: center;
+	width: 30px;
+	height: 100%;
+	align-content: flex-end;  
+}
+#cancelCloseButton {
+	width: 18px;
+	height: 18px;
+	padding-right: 12px;
+	cursor: pointer;
+}
+#cancelCt3 { /* 거래 취소 사유 전체 div */
+	height: 93px;
+	padding: 15px 15px 0 15px; 
+}
+#cancelCt3_1 {
+	height: 21px;
+	margin: 0 5px;
+	font-size: 14px;
+	color: #212121;
+}
+#cancelCt3_2 {
+	padding: 19.5px 0 19.5px; 
+	height: 34px;
+	border-bottom: 1px solid rgb(237, 237, 237);
+}
+#selectBox { /* 선택 상자 */
+	width: 100%;
+	height: 34px;
+	padding-left: 11px;
+	border: 1px solid #e8e8e8;
+}
+#cancelCt4 { /* 상세 내용 전체 div */
+	height: 114px;
+	padding: 11px 13px 18px 13px;
+}
+#cancelCt4_1 { /* 상세 내용 */
+	height: 22.5px;
+	margin: 0 5px;
+	font-size: 15px;
+	color: #212121;
+}
+#cancelCt4_2 {
+    display: block;
+    width: 100%;
+    background: #fafafa;
+    padding: 11px 12px 10px 12px;
+    margin-top: 16px;
+    font-size: 14px;
+    line-height: 17px;
+    resize: none;
+    height: 74px;
+    font-family: AppleSDGothicNeo-Regular;
+    border-radius: 2px;
+    border: 1px solid #e8e8e8;
+	    box-sizing: border-box; /* 박스의 크기를 테두리를 기준으로 정함 */
+/* 		    overflow: hidden; */
+/* 		    overflow-y: auto; */
+}
+#cancelCt4_223{ /* 취소 사유를 상세히 입력해주세요 */
+	width: 100%;
+	height: 75px; 
+	border: 1px solid #e8e8e8;
+	background-color: #fafafa;
+}
+#checkCt { /* 확인버튼 div */
+	display: flex;
+	width: 100%;
+	height: 56px;
+	position: fixed;
+	bottom: 0;
+}
+#checkButton { /* 확인버튼 */
+	width: 100%;
+	font-size: 18px;
+	color: rgb(255, 255, 255);
+	background-color: rgb(255, 80, 88);
+	border: none;
+	cursor: pointer; 
+}

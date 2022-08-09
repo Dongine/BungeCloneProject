@@ -1,0 +1,103 @@
+@charset "UTF-8";
+body {	
+	margin: 0px;
+}
+textarea {
+	width: calc(100% - 40px);
+	height: 285px;
+	margin: 50px 0px;
+	font-weight: bold;
+	font-size: 16px;
+	border: 2px solid rgb(237, 237, 237);
+	
+}
+textarea::placeholder {
+	font-weight: bold;
+	font-size: 16px;
+	color: rgb(197, 197, 197);
+}
+.fl {
+	float: left;
+}
+.fr {
+	float: right;
+}
+#reviewAllCt {
+	width: 100%;
+	height: 100vh;
+	background-color: rgb(237, 237, 237);
+}
+#reviewAllTitle { /* 후기작성 전체 div */
+	display: flex;
+	width: 100%;
+	height: 53px;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 2px solid rgb(237, 237, 237);
+	background-color: rgb(255, 255, 255);
+}
+#reviewWriteCloseButton { /* 나가기 버튼 */
+	width: 18px; 
+	height: 18px;
+	padding-right: 12px;
+	cursor: pointer;
+}
+#scoreCt { /* 별점 div */
+	width: 100%;
+	height: 30px;
+	border-bottom: 1px solid rgb(237, 237, 237);
+	background-color: rgb(255, 255, 255);
+}
+#scoreCt1 {
+	display: flex;
+	align-items: center;
+	margin-right: 10px;
+}
+.scoreCount {
+	font-size: 0px;
+	letter-spacing: -4px;
+}
+.scoreCount a {
+	font-size: 22px;
+	letter-spacing:0;
+	display: inline-block;
+	margin-left: 2px;
+	color: #ccc;
+	text-decoration: none;
+}
+.scoreCount a:first-child {
+	margin-left: 0px;
+}
+.scoreCount a.on {
+	color: yellow;
+}
+#textareaCt { /* 후기 작성란 div */
+	width: 100%;
+	height: 392px;
+	text-align: center;
+	background-color: rgb(255, 255, 255);
+}
+#reviewWriteInfo { /* 후기 안내문 */
+	padding: 1rem;
+	font-size: 0.6875rem;
+	color: #9b99a9;
+}
+#reviewWriteDoneButtonCt { /* 후기작성완료 버튼 */
+	display: flex;
+	width: 100%;
+	height: 56px;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	cursor: pointer;
+	bottom: 0;
+}
+button {
+	width: 100%;
+	height: 100%;
+	font-size: 18px;
+	color: rgb(255, 255, 255);
+	background-color: rgb(255, 80, 88);
+	border: none;
+	cursor: pointer;
+}

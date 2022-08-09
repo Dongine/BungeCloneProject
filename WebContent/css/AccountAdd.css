@@ -1,0 +1,181 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500&display=swap');
+body {
+	margin: 0px;
+	font-family: Noto Sans KR;
+}
+input[type="checkbox"]{
+	width: 20px;
+	height: 20px;
+	cursor: pointer;
+}
+.fl {
+	float: left;
+}
+.fr {
+	float: right;
+}
+.bold {
+	font-weight: bold;
+}
+.writeCt { /*작성 div*/ 
+	height: 62px;
+	margin-top: 20px;
+	margin-left: 22px;
+	margin-right: 22px;
+	font: Malgun Gothic;
+	border-bottom: 1px solid rgb(204, 204, 204);
+}
+.inputAccountText { /*예금주, 계좌번호 텍스트박스*/ 
+	width: 97%;
+	height: 59px;
+	border: none;
+}
+.contentFont { /*예금주, 은행선택, 계좌번호 폰트*/
+	font-size: 15px;
+} 
+#accountAddCt1 { /*계좌추가 div*/ 
+	width: 100%;
+    height: 955px;
+    text-align: center; 
+}
+#accountAddCt2 { /*계좌추가 div2*/
+	position: relative;
+	width: 680px;
+	height: 100%;
+	margin: auto;
+}
+#accountAddCt3 { /*계좌추가 상단div*/
+	display: flex;
+	width: 100%;
+	height: 50px;
+	align-items: center;
+}
+#accountAddCt4 {
+		width: 100%; 
+	height: 910px;
+	overflow-x: hidden; /*x축 스크롤바 숨기기*/
+	overflow-y: scroll; /*y축 스크롤바 생성*/ 
+	position: relative;
+}
+#accountAddCt5 { /*계좌 추가 타이틀 div*/
+	width: 100%;
+	height: 67px; 
+}
+#accountAddCt5Font { /*계좌 추가 타이틀 폰트*/
+	padding-left: 22px;
+	font: Noto Sans KR; 
+	font-size: 27px;
+	line-height: 1.21; 
+}
+#accountAddCt6 { /*예금주, 은행선택, 계좌번호 div*/
+	height: 306px;
+	margin: auto; 
+}
+#bankSelectCt { /*은행선택 div*/
+	height: 62px;
+	margin-top: 20px;
+	margin-left: 22px;
+	margin-right: 22px;
+	font: Malgun Gothic;
+	cursor: pointer;
+	border-bottom: 1px solid rgb(204, 204, 204);
+	
+	border-top: none;
+	border-right: none;
+	border-left: none;
+	color: rgb(25, 25, 25);
+	font-size: 15px;
+}
+option {
+	color: black;
+}
+#baseAccountCheckCt { /*기본계좌로 설정 전체 div*/
+	display: flex;
+	width: 150px; 
+	align-items: center;
+	margin: 10px 0px 0px 22px;
+	cursor: pointer;
+}
+#baseAccountCheck { /*기본계좌로 설정*/
+	font-size: 16px;
+}
+input::-webkit-input-placeholder { /*placeholder글자색 변경*/ 
+	font-weight: bold; 
+	color: rgb(189, 189, 189);  
+}
+#done { /*완료 전체 div*/
+	width: 680px;
+	height: 91.19px;
+		position: absolute;
+	position: fixed;
+	bottom: 0;
+	background-color: rgb(255, 255, 255);
+}
+#doneAccountButtonCt { /*완료 버튼 div*/
+	margin: 20px;
+	height: 50px;
+		background-color: rgb(251, 231, 232);
+/* 			background-color: rgb(216, 12, 24); */
+	border-radius: 5px;
+	cursor: auto;
+}
+#doneAccountButton { /*완료 버튼 */
+	width: 100%;
+	height: 100%;
+	left: 50%; 
+	top: 30%;
+	font-size: 15px;
+	border: none;
+	background-color: inherit;
+	color: rgb(255, 255, 255);
+}
+#modalBg {
+	position: absolute;
+	width: 100%;
+	height: 100%; 
+	background-color: black;
+	opacity: 0.3;
+	z-index: 3;
+	display: none;
+}
+#modalBankList {
+	position: absolute;
+	width: 100%;
+	height: 436px;
+	border-radius: 15px 15px 0px 0px;
+	background-color: white;
+	bottom: 0px;
+	z-index: 3;
+	display: none;
+}
+#modalBankList2 {
+	padding: 50px 30px 0;
+}
+#modalBankList3 {
+	height: 40vh;
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+.bankListCt {
+	display: flex;
+	width: 100%;
+	height: 21px;
+	align-items: center;
+	margin-bottom: 30px;
+	font-weight: bold;
+	font-size: 21px;
+	color: rgb(153, 153, 153);
+	cursor: pointer;
+}
+.iconSize {
+	width: 20px;
+	height: 20px;
+	margin-right: 10px;
+}
+.bankDone {
+	padding-top: 20px;
+	font-weight: bold;
+	font-size: 15px;
+}

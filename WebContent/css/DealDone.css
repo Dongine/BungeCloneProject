@@ -1,0 +1,125 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500&display=swap');
+body {
+	margin: 0px;
+}
+fl {
+	float: left;
+}
+fr {
+	float: right;
+}
+h2 {
+	font-family: Noto Sans KR;
+}
+button {
+    padding: 0px;
+    background: none;
+    border: none;
+    outline: 0px;
+}
+#dealDoneCt1 { /* 거래완료 전체 div */
+	width: 100%;
+	height: 100;
+}
+#dealDoneCt2 { /* 거래가 완료되었습니다 div */
+	width: 640px;
+	height: 919px;
+	margin: auto;
+	margin-top: 50px; 
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+#dealDoneTitleFont { /* 거래가 완료되었습니다 폰트 */
+	padding-left: 17px;
+	font-size: 1.5rem;
+	line-height: 1.34;
+	color: rgb(245, 126, 0); 
+}
+#dealDoneCt3_1 { /* 상품사진, 상품정보, 거래자닉네임 전체 div */
+	display: inline-block;
+	width: 623px;
+	min-height: 155px;
+	border-bottom: 8px solid rgb(234, 233, 241);
+}
+#dealDoneCt3_2 {
+	display: flex;
+	width: 591px;
+	height: 44px;
+	align-items: center;
+	padding: 27.5px 16px 12px 16px;
+}
+#dealDoneCt3_3 {
+	display: flex;
+	height: 44px;
+	margin-left: 12px;
+}
+#dealDoneCt3_4 {
+	height: 100%;
+}
+#deliveryChargeInclude {
+	position: relative;
+    margin-left: 1rem;
+    align-self: center;
+    color: rgb(30, 29, 41);
+    font-size: 15px;
+}
+#dealDoneCt3_5 { /* 제품명 */
+	height: 17.19px;
+	margin-top: 5px;
+	font-size: 15px;
+	line-height: 1.075rem;
+	margin: 0;
+  		color: rgb(114, 112, 127); 
+}
+#dealDoneCt3_6 {
+	min-height: 22.5px;
+	font-size: 15px;
+	align-items: center;
+	padding-left: 16px;
+}
+.dealProfileInquiryButton { /* 거래자 프로필 조회 */
+    text-decoration: underline; 
+    font-size: 15px;
+    color: rgb(30, 29, 41); 
+    cursor: pointer;
+}
+#dealDoneProductName {
+	word-break: break-all;
+}
+#dealDoneCt4 { /* 이용안내문 div */
+	width: 584px;
+	height: 47px;
+	margin-top: 80px;
+	padding: 22px;
+	font-size: 9px;
+	background-color: rgb(250, 250, 250);
+  		color: rgb(153, 153, 153);
+}
+#deliveryChargeInclude::before {
+	position: absolute;
+    left: -0.5rem;
+    top: 40%;
+    content: "";
+    display: inline-block;
+    width: 2px;
+    height: 2px;
+    background: rgb(30, 29, 41);
+    border-radius: 100%;
+}
+#gotoReviewWrite { /* 후기작성하기 */
+	width: 640px;
+    height: 56px;
+    text-align: center;
+    background: rgb(255, 80, 88);
+    cursor: pointer;
+    
+    position: fixed;
+	bottom: 0;
+} 
+#gotoReviewWriteFont { /*후기작성하기 폰트*/
+	margin-top: 15px;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+}

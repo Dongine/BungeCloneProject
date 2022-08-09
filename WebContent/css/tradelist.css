@@ -1,0 +1,329 @@
+@charset "UTF-8";
+		div, small, a, b, label, li, ul, p, footer, section, header, form, table,
+		thead, tr, th, tbody, img, nav, h1, span, aside, strong, body, mark{
+			margin: 0px;
+		    padding: 0px;
+		    border: 0px;
+		    font: inherit;
+		    vertical-align: baseline;
+		}
+		a{
+			text-decoration: none;
+		}
+		button{
+			padding: 0px;
+		    background: none;
+		    border: none;
+		    outline: 0px;
+		    margin: 0px;
+		}
+		header, nav, aside{
+			display: block;
+		}
+		body{
+			min-width: 320px;
+			line-height:1;
+		}
+		html, body{
+			margin: 0px;
+		}
+		body, * {
+		    box-sizing: border-box;
+		    font-family: "Noto Sans KR", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+		    font-weight: normal;
+		    color: rgb(30, 29, 41);
+		    outline: 0px;
+		    font-size: 16px;
+		}
+		ul{
+			list-style: none;
+		}
+		li{
+			text-align: center;
+		}
+		#root{
+			
+		}
+		.main section + section, .main a + a, .main a + section, .main section + a{
+		    border-top: 1px solid rgb(244, 244, 250);
+		}
+		.pageoverflow{
+		    display: block;
+ 		  	overflow: hidden;
+		}
+		.tradelistcast{
+			background-color: rgb(255, 255, 255);
+			display: flex;
+		    flex-direction: column;
+		    min-width: 320px;
+		    max-width: 640px;
+		    height: 100vh;
+		    margin: 0px auto;
+		    box-sizing: border-box;
+		}
+		.tradelistheader{
+			position: relative;
+		    flex-shrink: 0;
+		    flex-basis: 3.125rem;
+		    line-height: 3.125rem;
+		    font-weight: bold;
+		    text-align: center;
+		    color: rgb(30, 29, 41);
+		    background-color: rgb(255, 255, 255);
+		    z-index: 1;
+		}
+		.tradelistheader h1{
+		    font-size: 1.125rem;
+  			font-weight: bold;
+		}
+		.main{
+			position: relative;
+		    padding-bottom: 50px;
+		    box-sizing: border-box;
+		    line-height: 1.5;
+		    overflow: scroll;
+		    min-height: 100%;
+		    display: block;
+		}
+		.mainnavi{
+			
+		}
+		.mainnavi li{
+			text-align: center;
+		}
+		.mainstates{
+			position: relative;
+		    display: flex;
+		    background-color: rgb(255, 255, 255);
+		}
+		.mainstates li{
+			width: calc(33.3333%);
+		    height: 2.875rem;
+		    border-bottom: 1px solid rgb(234, 233, 241);
+		}
+		.mainstates li.selected button{
+			font-weight: bold;
+   			 color: rgb(30, 29, 41);
+		}
+		.mainstates li button{
+			width: 100%;
+		    line-height: 2.875rem;
+		    font-size: 1.125rem;
+		    color: rgb(114, 112, 127);
+		}
+		.mainbody{
+		    overflow: hidden;
+			background-color: rgb(255, 255, 255);
+			display:block;
+		}
+		.mainbody1{
+		    overflow: hidden;
+			background-color: rgb(255, 255, 255);
+			display:none;
+		}
+		.mainbody2{
+			overflow: hidden;
+			background-color: rgb(255, 255, 255);
+			display:none;
+		}
+		.mainbodystates{
+		    display: flex;
+		    -webkit-box-pack: justify;
+		    justify-content: space-between;
+		    padding-left: 1rem;
+		    height: 4rem;
+		    -webkit-box-align: center;
+		    align-items: center;
+		}
+		.mainbodystates button + button{
+		    margin-left: 10px;
+		}
+		.mainbodystatesselect{
+			padding: 0px 0.5rem;
+		    height: 1.5rem;
+		    border-radius: 12px;
+		    text-align: center;
+		    font-size: 13px;
+		    background: rgb(255, 80, 88);
+		    color: rgb(255, 255, 255);
+		}
+		.mainbodystatesnosel{
+			padding: 0px 0.5rem;
+		    height: 1.5rem;
+		    border-radius: 12px;
+		    background-color: rgb(244, 244, 250);
+		    text-align: center;
+		    font-size: 13px;
+		    color: rgb(155, 153, 169);
+		}
+		.mainbodystatelistcast{
+			width: 4rem;
+		    height: 4rem;
+		    display: flex;
+		    -webkit-box-align: center;
+		    align-items: center;
+		    -webkit-box-pack: center;
+		    justify-content: center;
+		}
+		
+		.mainproduct{
+			display: flex;
+ 			flex-direction: column;
+		}
+		.mainproductcast{
+			margin-top: 1rem;
+			padding: 0px 1rem;
+		}
+		.mainproductphotocast{
+			display: flex;
+		    -webkit-box-align: center;
+		    align-items: center;
+		    height: 6rem;
+		}
+		.mainproductphoto{
+			position: relative;
+		    display: flex;
+		    -webkit-box-align: center;
+		    align-items: center;
+		    border: 1px solid rgb(234, 233, 241);
+		    border-radius: 2px;
+		}
+		.mainproductphoto > img{
+			width: 6rem;
+    		height: 6rem;
+		}
+		.mainproductphotostates{
+			position: absolute;
+		    display: flex;
+		    flex-direction: column;
+		    -webkit-box-pack: center;
+		    justify-content: center;
+		    -webkit-box-align: center;
+		    align-items: center;
+		    left: 0px;
+		    top: 0px;
+		    width: 96px;
+		    height: 96px;
+		    background: rgba(30, 29, 41, 0.56);
+		    font-size: 0.875rem;
+		    font-weight: bold;
+		    color: rgb(255, 255, 255);
+		   /*  white-space: pre; */
+		    text-align: center;
+		}
+		.mainproductphotostates > img{
+		    width: 20px;
+		    height: 20px;
+		    margin-bottom: 0.25rem;
+		}
+		.mainproductright{
+			display: flex;
+		    -webkit-box-pack: center;
+		    justify-content: center;
+		    flex-direction: column;
+		    margin-left: 0.5rem;
+		    overflow: hidden;
+		}
+		.mainproductright, .mainproductrightname, .mainproductrightprice{
+			color: rgb(30, 29, 41);
+		    text-overflow: ellipsis;
+		    white-space: nowrap;
+		    overflow: hidden;
+		}
+		.mainproductrightname{
+			font-size: 0.875rem;
+		}
+		.mainproductrightprice{
+			display: flex;
+		    -webkit-box-align: center;
+		    align-items: center;
+		    padding: 4px 0px;
+		    font-size: 0.8125rem;
+		    line-height: 0.8125rem;
+		}
+		.mainproductrightprice strong{
+			margin-right: 2px;
+		    font-weight: bold;
+		    font-size: 1rem;
+		    color: rgb(30, 29, 41);
+		}
+		.mainproductright, .mainproductrightnickname, .mainproductrighttime{
+			line-height: 1rem;
+    		color: rgb(94, 92, 107);
+		}
+		.mainproductrightnickname{
+			font-size: 0.75rem;
+		}
+		.mainproductrighttime{
+			line-height: 1rem;
+		}
+		.mainproductrighttime > div{
+			font-size: 0.75rem;
+		}
+		#purchasebutton{
+			display: block;
+		}
+		#salebutton{
+			display: block;
+		}
+		#tradelistbutton{
+			display: block;
+		}
+/*------------------------------------------------------------------------------------------------------------------------------------*/
+		.tradelistmark{
+			position: relative;
+		    display: flex;
+		    -webkit-box-align: center;
+		    align-items: center;
+		    -webkit-box-pack: justify;
+		    justify-content: space-between;
+		    padding: 0px 1rem;
+		    background-color: rgb(244, 244, 250);
+		    line-height: 3rem;
+		    font-size: 0.875rem;
+		    color: rgb(155, 153, 169);
+		}
+		.tradelistresist{
+			box-sizing: border-box;
+		    font-family: "Noto Sans KR", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+		    font-weight: normal;
+		    color: rgb(30, 29, 41);
+		    outline: 0px;
+		    font-size: 16px;
+		}
+		.tradelistresist::after{
+		    content: "";
+		    display: inline-block;
+		    width: 12px;
+		    height: 12px;
+		    margin-left: 0.5rem;
+		    transform: translateY(1px);
+		    background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMiIgaGVpZ2h0PSIxMiIgdmlld0JveD0iMCAwIDEyIDEyIj4KICAgIDxwYXRoIGZpbGw9IiNDM0MyQ0MiIGZpbGwtcnVsZT0iZXZlbm9kZCIgZD0iTTMuMDUzIDExLjY0NmMtLjA5Ny0uMjE2LS4wNTgtLjQ2OC4xLS42NDVMNy41OTcgNiAzLjE1Mi45OThjLS4xNDItLjE2LS4xODgtLjM4NC0uMTItLjU4Ny4wNjctLjIwNC4yMzgtLjM1NS40NDctLjM5OS4yMS0uMDQzLjQyNy4wMy41Ny4xOWw0LjggNS40Yy4yMDIuMjI2LjIwMi41NjkgMCAuNzk2bC00LjggNS40Yy0uMTE0LjEyOS0uMjc3LjIwMi0uNDQ5LjIwMi0uMjM2IDAtLjQ1LS4xMzktLjU0Ny0uMzU0eiIvPgo8L3N2Zz4K) 0px 0px no-repeat;
+		}
+		.tradelistsection{
+		    text-align: left;
+    		background-color: rgb(255, 255, 255);
+		}
+		.tradelistsectioncast{
+		    display: flex;
+    		flex-direction: column;
+		}
+		.tradelistsectiontext{
+			line-height: 66px;
+		    font-size: 0.8125rem;
+		    text-align: center;
+		    border-top: 0px;
+		}
+		.tradelistbottom{
+			position: relative;
+		    margin-top: 0.1875rem;
+		    padding: 1.25rem 0.9375rem 1.25rem 1.5rem;
+		    font-size: 0.8125rem;
+		    line-height: 1.125rem;
+		    color: rgb(166, 166, 166);
+		}
+		.tradelistbottom::before{
+			position: absolute;
+		    content: "-";
+		    left: 14px;
+		}

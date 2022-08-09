@@ -1,0 +1,141 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500&display=swap');
+body {
+	margin: 0px; 
+}
+button, h1, p {
+	font-family: "Noto Sans KR", -apple-system;
+	letter-spacing: -1px;
+}
+button {
+	cursor: pointer;
+}
+.fl {
+	float: left;
+} 
+.fr {
+	float: right;
+}
+p {
+	margin-top: 20px;
+}
+#accountManagCt1 { /*계좌관리 div*/ 
+	width: 100%;
+    height: 100vh;
+	    text-align: center;
+}
+#accountManagCt2 { /*계좌관리 div2*/
+	width: 680px;
+	height: 100%;
+	margin: auto;
+}
+#accountManagCt3 { /*계좌관리 상단div*/
+	display: flex;
+	width: 100%;
+	height: 50px;
+	justify-content: space-between;
+	align-items: center;
+}
+#accountAddButton { /*계좌관리 우측상단 계좌추가버튼*/
+	font-size: 14px;
+	color: rgb(25, 25, 25);
+	text-decoration: underline;	
+	background: none;
+ 			border: none;
+}
+#accountManagCt4 { /*계좌관리 하단(스크롤바)div*/
+	position: relative;
+	width:100%;
+	height: 900px;
+	overflow-x: hidden; /*x축 스크롤바 숨기기*/
+	overflow-y: scroll; /*y축 스크롤바 생성*/
+}
+#accountManagCt5 { /*계좌 관리 타이틀 div*/
+	width: 100%;
+	height: 67px;
+}
+#accountManagCt5Font { /*계좌 관리 타이틀 폰트*/
+	padding-left: 22px;
+	font: Noto Sans KR;
+	font-size: 27px;
+	line-height: 1.21; 
+}
+
+/* 선택된 계좌가 없을 때 */
+#accountManagCt6 { /*계좌를 추가해주세요 div*/ 
+	width: 620px;
+	height: 175px;
+		margin: auto;  
+	border: 1px solid rgb(246, 246, 246);
+	border-radius: 5px;
+}
+
+/* 선택된 계좌가 있을 때 */
+#selectedBank { /*선택된 등록계좌 div*/ 
+	width: 580px;
+	height: 115px;
+	padding: 30px 20px;
+		margin: auto;  
+	border: 1px solid rgb(216, 12, 24);
+/* 			border: 1px solid rgb(246, 246, 246); */
+	border-radius: 5px;
+	cursor: pointer;
+/* 			display: none; */
+}
+.accountTopIcons { /* 정산계좌, 환불계좌 */
+	display: inline-block;
+	color: rgb(216, 12, 24);
+	background-color: rgb(251, 231, 232);
+	font-weight: bold;
+	font-size: 12px;
+	padding: 6px 8px;
+	border-radius: 4px;
+	margin-bottom: 23px;
+}
+.bankModifyDelete { /*수정 , 삭제*/
+	font-size: 13px;
+	color: rgb(153, 153, 153);
+	text-decoration: underline;
+	font-weight: bold;
+	border: none;
+	background-color: rgb(255, 255, 255);
+}
+.selectBankCt1 { /* 은행 아이콘 이름 전체 div */
+	display: flex;
+	width: 100%;
+}
+.bankNameFont { /* 은행이름 폰트 */
+	font-size: 1.125rem;
+	letter-spacing: normal;
+	margin-left: 8px;
+	font-weight: bold;
+}
+.accountNumberNameCt { /* 계좌번호 이름 div */
+	margin-top: 10px;
+	line-height: 1.5;
+	color: rgb(127, 127, 127);
+	font-size: 15px;
+	font-weight: bold;
+}
+.selectAccountButtonCt {
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	bottom: 0px;
+	left: 0px;
+	background-color: rgb(255, 255, 255);
+	display: none; 
+}
+.selectAccountButton {
+	width: 640px;
+	margin: 20px;
+	padding: 13px;
+	border: none;
+	border-radius: 6px;
+	font-size: 1rem;
+	font-weight: bold;
+	color: rgb(255, 255, 255);
+	background-color: rgb(216, 12, 24);
+	cursor: pointer;
+}

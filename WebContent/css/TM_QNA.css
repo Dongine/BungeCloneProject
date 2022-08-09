@@ -1,0 +1,109 @@
+@charset "UTF-8";
+
+			.main{
+				margin:0 auto;
+				text-align:center;
+				box-sizing:border-box;
+				vertical-align: baseline;
+			}
+			.hidden{
+				display:none;
+			}
+			.fl{
+				float:left;
+			}
+			.fr{
+				float:right;
+			}
+			.tc{
+				text-align:center;
+			}
+			.tl{
+				text-align:left;
+			}
+			.width{
+				width:100%;
+			}
+			.height{
+				height:100%;
+			}
+			.flex{
+				display:flex;
+				align-items:center;
+				justify-content:space-between;
+			}
+			.font{
+				font-size:12px;
+			}
+			.font12{
+				font-size:12px;
+			}
+			.font14{
+				font-size:14px;
+			}
+			.font16{
+				font-size:16px;
+			}
+			.font18{
+				font-size:18px;
+				margin-bottom:20px;
+				font-weight: bold;
+    			color: rgb(76, 76, 76);
+			}
+			.font28{
+				font-size:28px;
+			}
+			.inquiry{
+				font-weight: 500;
+				color: rgb(25, 25, 25);
+				text-decoration: underline;
+    			cursor: pointer;
+			}
+			.box{
+				width:100%;
+				max-width:640px;
+			}
+			.box1{
+				color: rgb(24, 24, 24);
+			    font-weight: bold;
+			    margin: 30px 20px 0px;
+			}
+			.box2{
+				min-height: 400px;
+			    padding: 30px 20px;
+			    box-sizing: border-box;
+			    border-bottom:1px solid rgb(238,238,238);
+			}
+			.box3{
+				margin:30px;
+			}
+			.box2-1{
+				padding:20px 0;
+				cursor: pointer;
+			}
+			.s1{
+				color: rgb(25, 25, 25);
+   				font-weight: bold;
+			}
+			.an{	/*답변 완료*/
+				color: rgb(0, 165, 135);
+			    padding-right: 8px;
+			    border-right: 1px solid rgb(229, 229, 229);
+			    margin-right:8px;
+			}
+			.an1{
+				color: rgba(102, 102, 102, 0.5);
+			}
+			ul{
+				padding:0px;
+			}
+			li{
+				margin-bottom:20px;
+				color:#999999;
+			}
+			a{
+ 			 	color: inherit;
+			}
+			#move{
+				cursor:pointer;
+			}

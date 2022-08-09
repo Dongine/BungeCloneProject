@@ -1,0 +1,148 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500&display=swap');
+body {
+	margin: 0px;
+	font-family: "Noto Sans KR";
+}
+fl {
+	float: left;
+}
+fr {
+	float: right;
+}
+button {
+	width: 65px;
+	height: 40px; 
+	border: none;
+}
+input::-webkit-input-placeholder { /*placeholder글자색 변경*/
+	font-size: 1rem; 
+	color: rgb(155, 153, 169);
+	border: none;  
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button { /* input 오른쪽 화살표 없애기 */
+    -webkit-appearance: none;
+    margin: 0;
+} 
+#reportCt1 { /*신고이력조회화면 전체 div*/ 
+	width: 100%;
+	height: 503.59px;
+}
+#reportTitleFont { /*신고이력 조회폰트*/
+	font-size: 1rem;
+	padding-left: 1rem;
+	color: rgb(30, 29, 41);
+}
+#reportInfoFont { /*신고 안내 폰트*/
+	position: relative;
+	padding: 0rem 1rem;
+	font-size: 0.8125rem;
+	word-break: keep-all;
+	color: rgb(114, 112, 127);
+}
+.contentCt1 { /*계좌번호, 휴대전화, 카카오톡 전체 div*/ 
+	padding: 0rem 1rem;
+}
+#borderB1 {
+	border-bottom: rgb(238, 238, 238);
+}
+#borderB2 {
+	border-bottom: rgb(238, 238, 238);
+}
+.contentCt2 { 
+	display: flex; 
+	align-items: center;
+	padding-top: 28px; 
+	height: 58px;
+	justify-content: flex-start; 
+	border-bottom: 1px solid rgb(234, 233, 231);
+}
+.contentCt2ResultLFont { /* 좌측폰트 */
+	color: rgb(114, 112, 127);
+}
+.contentCt2ResultRFont { /* 우측폰트 */
+	color: rgb(30, 29, 41);
+}
+.contentCt2ResultRFont2 { /* 우측폰트2 */
+	color: rgb(255, 80, 88);
+	text-decoration: underline;
+	font-size: 0.875rem;
+	cursor: pointer;
+}
+
+.contentCt2Result1 { /* 계좌번호 입력시 결과 */
+	margin: 1rem 0px 0px;
+	padding: 1.25rem 1rem;
+	border-radius: 2px;
+	background-color: rgb(244, 244, 250);
+	border-bottom: 1px solid rgb(238, 238, 238);
+ 		display: none;  
+}
+.contentCt2Result1_1 {
+	display: flex;
+	justify-content: space-between; 
+	font-size: 14px;
+}
+.contentCt2Result2 { /* 휴대전화 입력시 결과 */
+	margin: 1rem 0px 0px;
+	padding: 1.25rem 1rem;
+	border-radius: 2px;
+	background-color: rgb(244, 244, 250);
+	border-bottom: 1px solid rgb(238, 238, 238);
+	display: none;
+}
+.contentCt2Result3 { /* 카카오톡 입력시 결과 */
+	margin: 1rem 0px 0px;
+	padding: 1.25rem 1rem;
+	border-radius: 2px;
+	background-color: rgb(244, 244, 250);
+	border-bottom: 1px solid rgb(238, 238, 238);
+	display: none;
+}
+.contentLeftCt2 {
+	display: flex;
+	align-items: center;
+	width:100%;
+	height: 100%;
+	justify-content: flex-start;
+	
+}
+.contentRightCt2 {
+	display: flex;
+	align-items: center;
+	width:65px;
+	height: 100%;
+	justify-content: flex-end;
+}
+.ct2FirstFont { /*계좌번호, 휴대전화, 카카오톡 폰트*/
+	display: flex;
+	width:56px;	
+	height:56px;
+	justify-content: center;
+	align-items: center; 
+	font-size: 0.875rem;
+	color: rgb(114, 112, 127);
+}
+.contentCt2 > .contentLeftCt2 > input:focus { 
+	outline: none; 
+}
+.input {
+	padding: 0px 1rem 0px 1.625rem;	
+	height: 100%;
+	font-size: 1rem;
+	border: none;
+}
+.buttonFont { /*조회 글자 폰트*/
+	font-size: 1rem;
+	color: rgb(255, 255, 255); 
+}
+.accountB {
+	background-color: rgb(253, 212, 212);
+}
+.phoneB {
+	background-color: rgb(253, 212, 212);
+}
+.kakaoB {
+	background-color: rgb(253, 212, 212);
+}

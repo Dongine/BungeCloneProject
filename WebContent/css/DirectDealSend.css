@@ -1,0 +1,234 @@
+@charset "UTF-8";
+body {
+	font-family: AppleSDGothicNeoL; 
+	font-size: 14px;
+	margin: 0px;
+}  
+fl {
+	float: left;
+}
+fr {
+	float: right;
+}
+input::-webkit-input-placeholder { /*placeholder글자색 변경*/ 
+	font-size: 14px;
+	color: #808080;  
+}
+#dealSendCt1 { /*거래하기 전체 div*/
+	width: 100%;
+	height: 100vh;
+	background-color: rgb(237, 237, 237);
+}
+#dealSendCt1_1 { /*거래하기 전체 흰배경div*/
+	width: 100%;
+	height: 505px;
+	background-color: white;
+} 
+#dealSendCt2 { /*거래하기 상단 div*/
+	display: flex;
+	height: 53px;
+	border-bottom: 2px solid rgb(237, 237, 237); 
+}
+#dealSendCt2Left { /*거래하기 왼쪽 div*/
+	display: flex;
+	width: 100%;
+	height: 100%; 
+}
+#dealSendCt2LeftFont { /*거래하기 폰트*/
+	display: flex;
+	align-items: center;
+	margin-left: 9px;
+	font-size: 16px;
+	color: rgb(33, 33, 33);
+}
+#dealSendCt2Right { /*거래하기 오른쪽(닫는버튼) div*/
+	display: flex;
+	align-items: center;
+	width: 30px;
+	height: 100%;
+	align-content: flex-end;  
+}
+#dealSendCloseButton {
+	width: 18px;
+	height: 18px;
+	padding-right: 12px;
+	cursor: pointer;
+}
+#dealSendCt3 { /*거래상품 전체div*/
+	display: flex;
+	height: 46px;
+	align-items: center;
+	padding-left: 16px;
+	border-bottom: 1px solid rgb(237, 237, 237); 
+}
+/* #dealSendCt4 { 거래상품을 선택해주세요 전체div
+	height: 63px;
+	cursor: pointer;
+	border-bottom: 7px solid rgb(237, 237, 237);
+}
+#dealSendCt4Left { 거래상품을 선택해주세요 왼쪽div
+	display: flex;
+	width: 250px;
+	height: 100%;
+	padding-left: 16px; 
+	align-items: center;
+	float: left; 
+}
+#dealSendCt4Right { 거래상품을 선택해주세요 오른쪽div
+	align-items: center;
+	margin-right: 20px;
+	float: right;
+} */
+#dealSendCt4 { /* 상품사진, 거래상태, 제품명, 가격, 직거래여부 전체 div */
+	display: flex;
+	align-items: center;
+	padding: 0 15px;
+	border-bottom: 8px solid #e6e6e6;
+}
+#dealSendCt4_1 { /* 거래상태, 제품명, 가격, 직거래여부 전체 div */
+	height: 70px;
+	margin-left: 18px;
+	margin-top: 15px;
+}
+#dealSendCt4_1Font { /* 상품명, 가격 폰트 */
+	font-size: 16px;
+	margin: 3px 0 0;
+}
+
+#dealSendCt5 { /*거래정보 div*/
+	display: flex;
+	height: 46px;
+	font-size: 15px;
+	color: #212121;
+	align-items: center;
+	padding-left: 16px;
+	border-bottom: 1px solid rgb(237, 237, 237);
+}
+#dealSendCt6_1 { /* 거래일 전체 div */
+	display: flex;
+	width: 100%;
+	height: 40px;
+	align-items: center;
+	margin-right: 17px; 
+	padding-top: 26px; 
+}
+#dealSendCt6_1Left { /* 거래일 div */
+	width: 101px;
+	height: 46px;
+	margin-left: 23px;
+}
+#dealSendCt6_1Right { /* 거래일 선택 div */
+	display: flex;
+	width: 100%;
+	align-items: center; 
+	height: 35px; 
+}
+#dealSendDaySelect { /* 거래일 선택 */
+	display: flex;
+	width: calc(100% - 17px);
+	height: 34px;
+	padding-left: 8px; 
+	align-items: center; 
+	border-radius: 2px;
+	border: 1px solid #e8e8e8;
+}
+#dealSendCt6_2 { /* 장소 전체 div */
+	display: flex;
+	height: 38.16px;
+	margin-left: 17px;
+	margin-right: 17px;
+	border-bottom: 1px solid rgb(237, 237, 237); 
+}
+#dealSendCt6_2Left { /* 장소 div */
+	display: flex;
+	width: 101px;
+	height: 100%;
+	align-items: center; 
+	margin-left: 6px; 
+}
+#dealSendCt6_2Right { /* 정확한 장소 div */
+	display: flex;
+	width: 100%;
+	height: 100%;
+	align-items: center;
+}
+#dealSendCt6_2Place { /* 정확한 장소 input */
+	display: flex;
+	width: 100%;
+	height: 21px;
+	align-items: center;
+	border: none;
+}
+#dealSendCt7_1 { /* 연락처 전체 div */
+	display: flex;
+	width: 100%;
+	height: 104px;
+}
+#dealSendCt7_1Left { /* 연락처  div */
+	display: flex;
+	width: 103px;
+	height: 100%;
+	align-items: center;
+	margin-left: 23px;
+}	
+#dealSendCt7_1Right { /* 연락처 내용, 안내문 */
+	width: 100%;
+	height: 100%;
+}
+#dealSendCt8 { /* 번개장터의 다양한 혜택 알림받기 전체 div */
+	width: 100%;
+	height: 53px;
+}
+#dealSendCt9 { /* 번개장터 상품정보, 거래안내 div */
+	height: 81.5;
+	padding: 1rem;
+	font-size: 0.6875rem;
+	color: #9b99a9;
+}
+#dealSendCt10 { /* 임시저장, 전송버튼 전체 div */
+	display: flex;
+	width: 100%;
+	height: 56px;
+	
+	position: fixed;
+	bottom: 0;
+}
+/* #dealSendTemporaryStorageButton { 임시저장버튼
+	width: 35%;	
+	font-size: 18px;
+	color: rgb(255, 80, 88);
+	background-color: rgb(255, 255, 255);
+	border: none;
+	cursor: pointer;
+} */
+#dealSendButton { /* 전송버튼 */
+	width: 100%;
+	font-size: 18px;
+	color: rgb(255, 255, 255);
+	background-color: rgb(255, 80, 88);
+	border: none;
+	cursor: pointer;
+}
+.dealCtFont1 { /* 거래상품, 거래정보 폰트 */
+	font-size: 15px; 
+	color: #212121;
+}
+.dealCtFont2 { /* 거래상품을 선택해주세요, 거래일, 장소, 연락처, 번개장터의 다양한 혜택 알림받기, 거래일 폰트 */
+	font-size: 14px;
+	color: rgb(33, 33, 33);
+}
+.redFont { /* 폰트 빨간색  */
+	color: red;
+}
+.infoContentFont { /* 안내문 폰트 */
+	margin-top: -1px;
+	font-size: 12px;			
+	color: #808080;
+}
+.customCheckboxPushAgreement {
+	padding: 15px 0;
+}
+.flexAlignItemsCenter {
+	display: flex;
+	align-items: center;
+}

@@ -1,0 +1,103 @@
+@charset "UTF-8";
+
+.main{
+				margin:0 auto;
+				text-align:center;
+				box-sizing:border-box;
+				vertical-align: baseline;
+			}
+			.fl{
+				float:left;
+			}
+			.tl{
+				text-align:left;
+			}
+			.flex{
+				display:flex;
+				align-items:center;
+				justify-content:space-between;
+			}
+			.box{
+			    width: 100%;
+			    max-width: 640px;
+			}
+			.box1{
+				padding: 12px 20px;
+			}
+			.type_select{
+				font-size: 0.875rem;
+			    font-weight: 500;
+			    font-stretch: normal;
+			    font-style: normal;
+			    line-height: 1;
+			    letter-spacing: normal;
+			    color: rgb(178, 178, 178);
+			}
+			.details_type{
+				margin: 12px 0px 6px;
+			    font-size: 1.375rem;
+			    font-weight: bold;
+			    font-stretch: normal;
+			    font-style: normal;
+			    line-height: 1.36;
+			    letter-spacing: normal;
+			    color: rgb(25, 25, 25);
+			}
+			.time{
+				margin-bottom: 18px;
+			    font-size: 0.75rem;
+			    font-weight: 500;
+			    font-stretch: normal;
+			    font-style: normal;
+			    line-height: 1;
+			    letter-spacing: normal;
+			    color: rgb(153, 153, 153);
+			}
+			.line{
+				margin: 0px 20px;
+			    height: 1px;
+			    background-color: rgb(246, 246, 246);
+			}
+			.box2{
+				padding: 30px 20px 20px;
+			    font-weight: 500;
+			    font-stretch: normal;
+			    font-style: normal;
+			    line-height: 1.5;
+			    letter-spacing: normal;
+			    color: rgb(76, 76, 76);
+			}
+			.font{
+				color: rgb(76, 76, 76);
+			}
+			.binbox{
+				width: 100%;
+			    height: 12px;
+			    background-color: rgb(246, 246, 246);
+			    margin-top: 60px;
+			}
+			.box3{
+				padding: 40px 20px 20px;
+			    display: flex;
+			    flex-direction: column;
+			}
+			.answer{
+				font-weight: bold;
+			    font-stretch: normal;
+			    font-style: normal;
+			    line-height: 1;
+			    letter-spacing: normal;
+			    color: rgb(0, 165, 135);
+			}
+			.answer1{
+				margin: 20px 0px 0px;
+			    font-size: 0.938rem;
+			    font-weight: 500;
+			    font-stretch: normal;
+			    font-style: normal;
+			    line-height: 1.6;
+			    letter-spacing: normal;
+			    color: rgb(76, 76, 76);
+			    word-break: keep-all;
+			    overflow-wrap: break-word;
+			}

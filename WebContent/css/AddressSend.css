@@ -1,0 +1,381 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500&display=swap');
+body {
+	margin: 0px;
+} 
+div, p, span {
+	font: "Noto Sans KR";
+}
+button {
+    padding: 0px;
+    background: none;
+    border: none;
+    outline: 0px;
+}
+.fl {
+	float: left;
+}
+.fr {
+	float: right;
+}
+#allCt {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+}
+#addressSendCt1 {
+	display: flex;
+	flex-direction: column;
+	min-width: 320px;
+	max-width: 640px;
+	height: 100vh;
+	margin: 0px auto;
+}
+#addressSendCt2 {
+	width: 100%;
+	height: 100%;
+}
+#addressSendCt3 {
+	width: 100%;
+	height: 50px; 
+}
+#addressSendCt4 {
+	width: 100%;
+	height: 864px;
+	overflow-x: hidden; 
+	overflow-y: scroll ;
+}
+#addressContentCt1 {
+	width: 100%;
+}
+#addressContentCt1_1 {
+	text-align: left;
+	padding-top: 0px;
+	padding-left: 17px;
+}
+#addressContentCt1_2 { /*상품선택 div*/
+	cursor: pointer;
+	padding-left: 15px;
+	height: 46px;
+	margin-bottom: 25px;
+	display: none;
+}
+.selectProduct { /*상품선택안내글자*/
+	padding-left: 12px;
+	height: 100%;
+	font-size: 15px;
+   	color: rgb(155, 153, 169);
+}
+#addressProductButton { /*상품선택버튼*/
+	font-size: 14px;
+	padding-top: 3px;
+    text-decoration: underline; 
+    cursor: pointer; 
+    color: rgb(30, 29, 41);
+}
+
+/* 상품을 선택했을 경우 */
+#sellarDealCt1 { /* 상품사진, 상품정보, 거래자닉네임 전체 div */
+	width: 623px;
+	height: 134.5px;
+/* 			display: none; */
+}
+#sellarDealCt2 {
+	display: flex;
+	width: 591px;
+	height: 44px;
+	align-items: center;
+	padding: 27.5px 16px 12px 16px;
+}
+#sellarDealCt3 {
+	display: flex;
+	height: 44px;
+	margin-left: 12px;
+}
+#sellarDealCt4 {
+	height: 100%;
+}
+#sellarDealCt5 { /* 제품명 */
+	height: 17.19px;
+	margin-top: 5px;
+	font-size: 15px;
+	line-height: 1.075rem;
+	margin: 0;
+  		color: rgb(114, 112, 127); 
+}
+#sellarDealCt6 {
+	display: flex;
+	height: 22.5px;
+	font-size: 15px;
+	align-items: center;
+	padding-left: 16px;
+}
+.dealProfileInquiryButton { /* 거래자 프로필 조회 */
+    text-decoration: underline; 
+    font-size: 15px;
+    color: rgb(30, 29, 41); 
+    cursor: pointer;
+}
+.deliveryChargeInclude {
+	position: relative;
+    margin-left: 1rem;
+/* 		    align-self: center; */
+    color: rgb(30, 29, 41);
+    font-size: 15px;
+}
+		.deliveryChargeInclude::before {
+	position: absolute;
+    left: -0.5rem;
+    top: 40%;
+    content: "";
+    display: inline-block;
+    width: 2px;
+    height: 2px;
+    background: rgb(30, 29, 41);
+    border-radius: 100%;
+}  
+.changeButton { /* 변경 버튼 */ 
+	width: 44px;
+	height: 17px;
+	margin-left: 8px; 
+	padding:0px;
+	font-size: 13px;
+	color: rgb(155, 153, 169); 
+	background: none;
+	border: none;
+	cursor: pointer;
+}
+
+/* 배송지를 선택 안했을 때 */
+#addressContentCt2 { /*배송지정보 div*/
+	padding-top: 34px;
+	width: 100%;
+	height: 100px;
+	display: none;
+}
+#addressInfoFont1 { /* 배송지정보 폰트*/
+	padding-left: 14px;
+	font-size:1rem;
+}
+#addressInfoFont2 { /*배송지 정보 하단 회색글씨 폰트*/
+	padding-left: 14px;
+	padding-top: 25px;
+	font-size: 15px;
+ 			color: rgb(155, 153, 169);
+}
+
+/* 배송지를 선택했을 때 */
+#addressDoneCt {
+	width: 591px;
+	height: 152.75px;
+	padding: 0 16px;
+/* 			display: none; */
+}
+#addressDoneCt1 { /* 배송지정보 전체 div */
+	width: 100%;
+	height: 89px;
+	padding: 32px 0 32px 0;
+	border-bottom: 1px solid rgb(234, 233, 241);
+}
+#phoneNumber { /* 핸드폰 번호 */
+	position: relative;
+    margin-left: 1rem;
+/* 		    align-self: center; */
+    color: rgb(30, 29, 41);
+}
+#phoneNumber::before {
+	position: absolute; 
+    left: -0.5rem; 
+    top: 40%;
+    content: "";
+    display: inline-block;
+    width: 2px;
+    height: 2px;
+    background: rgb(30, 29, 41);
+    border-radius: 100%;
+}
+
+#addressContentCt3 { /* 이용안내문 div */
+	width: 584px;
+	height: 47px;
+	margin-top: 80px;
+	padding: 22px;
+	font-size: 9px;
+	background-color: rgb(250, 250, 250);
+  		color: rgb(153, 153, 153);
+}
+#addressGuideFont { /* 이용안내 폰트*/
+	padding-left: 19px;
+	font-size: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+#addressInputButton1 { /* 배송지 입력하기 버튼 */
+	width: 640px;
+    height: 56px;
+    text-align: center;
+    background: rgb(255, 80, 88);
+    cursor: pointer;
+   
+   position: fixed;
+	bottom: 0;
+/* 			display: none; */
+} 
+#addressInputButton2 { /* 배송지 전송하기 버튼 */
+	width: 640px;
+    height: 56px;
+    text-align: center;
+    background: rgb(255, 80, 88);
+    cursor: pointer;
+    
+    position: fixed;
+	bottom: 0;
+	display: none;
+} 
+.addressInputButtonFont { /*배송지 입력하기 버튼 폰트*/
+	margin-top: 15px; 
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+}
+#productCt1 { /* 상품선택 전체 div */
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	background-color: rgb(120, 119, 127);
+	display: none;
+}
+#productCt2 {
+	width: 640px;
+	height: 100%;
+	margin: auto;
+	background-color: rgb(255, 255, 255);
+}
+#productCt3 {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 52px;
+	font-size: 1.125rem;
+	color: rgb(30, 29, 41);
+}
+#productCt4 {
+	display: flex; 
+	height: 917px;
+	color: rgb(30, 29, 41);
+	font-size: 16px;
+	justify-content: center;
+	align-items: center;
+    overflow-x: hidden;
+    overflow-y: scroll;
+} 
+
+/* 가격, 배송비여부 변경 */
+#priceChangeBg {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	background-color: rgb(30, 29, 41);
+	opacity: 0.6;
+	display: none;
+}
+#priceChangeCt {
+	position: fixed;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	border-top-left-radius: 1rem;
+	border-top-right-radius: 1rem;
+	font-size: 1rem;
+	min-width: 320px;
+	max-width: 640px;
+	max-height: 80vh;
+	margin: 0px auto;
+	background-color: rgb(255, 255, 255);
+	display: none;
+}
+.priceChangeCtTop {
+	display: flex;
+	justify-content: right;
+	width: 100%;
+	height: 56px;
+}
+#priceChangeCtCloseButton {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 40px;
+	height: 40px;
+	margin: 15px;
+	cursor: pointer;
+}
+.priceChangeContentCt {
+	padding: 0px 28px 32px;
+}
+.priceChangeContent1 {
+	font-size: 20px;
+	font-weight: bold;
+}
+.priceChangeContent2 {
+	margin-top: 6px;
+	font-size: 14px;
+	color: rgb(94, 92, 107);
+}
+.priceChangeContent3 {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 2.75rem 0rem 1rem 0rem;
+	height: 60px;
+}
+.priceChangeContent3 > input::placeholder {
+	font-weight: bold;
+	font-size: 26px;
+	text-align: right;
+	border: none;
+}
+input:focus {
+	outline: none;
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+#priceChangeInputConsumer {
+	height: 100%;
+	font-weight: bold;
+	font-size: 26px;
+	text-align: right;
+	border: none;
+}
+.priceChangeInfo {
+	font-size: 11px;
+    color: rgb(155, 153, 169);
+    position: relative;
+    padding-left: 0.625rem;
+}
+.priceChangeInfo::before {
+	position: absolute; 
+    left: -0.5rem; 
+    top: 40%;
+    content: "";
+    display: inline-block;
+    width: 2px;
+    height: 2px;
+    background: rgb(155, 153, 169);
+    border-radius: 100%; 
+}
+#priceChangeDoneButton {
+	width: 100%;
+    padding: 1.125rem;
+    background: rgb(255, 80, 88);
+    border: 0px;
+    color: rgb(255, 255, 255);
+    font-size: 1.125rem;
+    font-weight: bold;
+    cursor: pointer;
+}

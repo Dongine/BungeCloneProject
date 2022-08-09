@@ -1,0 +1,188 @@
+@charset "UTF-8";
+body {
+	margin: 0px;
+}
+#dealCheckCt1 { /* 거래하기 전체 div */
+	width: 100%;
+	height: 950px; /**/
+	background-color: rgb(237, 237, 237);
+}
+#dealCheckCt1_1 { /* 거래하기 전체 흰배경 div */
+	width: 100%;
+	height: 412px;
+	background-color: white;
+} 
+#dealCheckCt2 { /* 거래하기 상단 div */
+	display: flex;
+	height: 53px;
+	border-bottom: 2px solid rgb(237, 237, 237); 
+}
+#dealCheckCt2Left { /* 거래하기 왼쪽 div */
+	display: flex;
+	width: 100%;
+	height: 100%; 
+}
+#dealCheckCt2LeftFont { /* 거래하기 폰트 */
+	display: flex;
+	align-items: center;
+	margin-left: 9px;
+	font-size: 16px;
+	color: rgb(33, 33, 33);
+}
+#dealCheckCt2Right { /*거래하기 오른쪽(닫는버튼) div*/
+	display: flex;
+	align-items: center;
+	width: 30px;
+	height: 100%;
+	align-content: flex-end;  
+}
+#dealCheckCloseButton {
+	width: 18px;
+	height: 18px;
+	padding-right: 12px;
+	cursor: pointer;
+}
+#dealCheckCt3 { /* 거래상품 전체div */
+	display: flex;
+	height: 46px;
+	align-items: center;
+	justify-content: space-between;
+	padding-left: 16px;
+	border-bottom: 1px solid rgb(237, 237, 237); 
+}
+#dealCheckCt3Right { /* 판매자 닉네임 */
+	font-size: 13px;
+	color: #b3b3b3; 
+	cursor: pointer;
+}
+#dealCheckCt4 { /* 상품사진, 거래상태, 제품명, 가격, 직거래여부 전체 div */
+	display: flex;
+	height: 104px;
+	align-items: center;
+	padding: 0 15px;
+	border-bottom: 8px solid #e6e6e6;
+}
+#dealCheckCt4_1 { /* 거래상태, 제품명, 가격, 직거래여부 전체 div */
+	height: 70px;
+	margin-left: 18px;
+	
+}
+#dealingDirect { /* 거래중 */
+	font-size: 0.625rem;
+	padding: 2px;
+	border-radius: 1px;
+	color: red;
+	border: 1px solid red; 
+}
+#dealCompletedDirect { /* 거래완료 */
+	width: 40px;
+	font-size: 0.625rem;
+	padding: 2px;
+	border-radius: 1px;
+	color: rgb(255, 177, 61);
+	border: 1px solid rgb(255, 177, 61); 
+}
+#dealCheckCt4_1Font { /* 상품명, 가격 폰트 */
+	font-size: 16px;
+	margin: 3px 0 0;
+}
+#dealCheckInfo { /*거래정보 div*/
+	display: flex;
+	height: 46px;
+	align-items: center;
+	padding-left: 16px;
+	border-bottom: 1px solid rgb(237, 237, 237);
+}
+#dealCheckCt5 { /* 거래일, 장소 연락처 전체 div */
+	width: 645px;
+	height: 150px;
+	padding: 0 16px 0 16px;
+}
+#dealCheckCt5_1 { /* 거래일 전체 div */
+	display: flex;
+	height: 20px;
+	padding: 17px 0 10px 0;
+	font-size: 14px;
+	color: #808080;
+}
+#dealCheckCt5_1_1 {
+	width: 103px;
+	height: 20px;
+	margin: 0;
+}
+#dealCheckCt5_2 { /* 장소 전체 div */
+	display: flex;
+	height: 20px;
+	padding: 9px 0 9px 0;
+	font-size: 14px;
+	color: #808080;
+}
+#dealCheckCt5_3 { /* 연락처 전체 div */
+	display: flex;
+	height: 40px;
+	padding: 9px 0 17px 0;
+	align-items: center; 
+	font-size: 14px;
+	color: #808080;
+}
+#dealCheckCt5_3_1 {
+	display: flex;
+	width: 103px;
+	height: 40px;  
+	margin: 0;
+	align-items: center;
+}
+#dealCheckCt6 { /* 안내문 div */
+	height: 34px;
+	padding: 1rem;
+	font-size: 0.6875rem;
+	color: #9b99a9;
+}
+#dealCheckCt7 { /* 거래취소, 후기작성, 거래완료버튼 전체 div */
+	display: flex;
+	height: 56px;
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+}
+#dealCancelA { /* 거래취소 a태그 */
+	width: 33.3%;	
+}
+#dealCancelButton { /* 거래취소버튼 */
+	width: 50%;
+	height: 100%;
+	font-size: 18px;
+	color: rgb(255, 80, 88);
+	background-color: rgb(255, 255, 255);
+	border: none;
+	cursor: pointer;
+}
+#reviewWriteButton { /* 후기작성버튼 */
+	width: 100%;
+	height: 100%;
+	font-size: 18px;
+	color: rgb(255, 255, 255);
+	background-color: rgb(255, 80, 88);
+	border: none;
+	cursor: pointer;
+}
+#dealDoneButton { /* 거래완료버튼 */
+	width: 50%;
+	font-size: 18px;
+	color: rgb(255, 255, 255);
+	background-color: rgb(255, 80, 88);
+	border: none;
+	cursor: pointer;
+}
+.dealCtFont1 { /* 거래상품, 거래정보 폰트 */
+	font-size: 15px; 
+	color: #212121;
+}
+.dealCtFont2 { /* 거래일, 장소, 연락처, 번개장터의 다양한 혜택 알림받기, 거래일 폰트 */
+	font-size: 14px;
+	color: #808080;
+}
+.dealCtFont3 {
+	font-size: 14px;
+	color: #212121;
+}

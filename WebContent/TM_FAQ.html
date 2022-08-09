@@ -1,0 +1,217 @@
+<link rel="shortcut icon" href="images/favicon.ico">
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>번개장터 고객센터</title>
+	<script src="js/jquery-3.6.0.min.js"></script>
+	<link rel="stylesheet" href="css/TM_FAQ.css"/>
+	<script>
+		function c1(){
+			if ($('#1').css('display')=='block') {
+				$('#2').css('display','none');
+				$('#3').css('display','none');
+				$('#4').css('display','none');
+				$('#5').css('display','none');
+				$('#btn1').css('color','#00a587');
+			} else if ($('#1').css('display') == 'none') {
+				$('#1').css('display','block');
+				$('#2').css('display','none');
+				$('#3').css('display','none');
+				$('#4').css('display','none');
+				$('#5').css('display','none');
+				$('#btn1').css('color','#00a587');
+				$('#btn2').css('color','#b2b2b2');
+				$('#btn3').css('color','#b2b2b2');
+				$('#btn4').css('color','#b2b2b2');
+				$('#btn5').css('color','#b2b2b2');
+			} 
+		}
+		function c2(){
+			if ($('#2').css('display')=='block') {
+				$('#1').css('display','none');
+				$('#3').css('display','none');
+				$('#4').css('display','none');
+				$('#5').css('display','none');
+			} else if ($('#2').css('display') == 'none') {
+				$('#2').css('display','block');
+				$('#1').css('display','none');
+				$('#3').css('display','none');
+				$('#4').css('display','none');
+				$('#5').css('display','none');
+				$('#btn1').css('color','#b2b2b2');
+				$('#btn2').css('color','#00a587');
+				$('#btn3').css('color','#b2b2b2');
+				$('#btn4').css('color','#b2b2b2');
+				$('#btn5').css('color','#b2b2b2');
+			} 
+		}
+		function c3(){
+			if ($('#3').css('display')=='block') {
+				$('#2').css('display','none');
+				$('#1').css('display','none');
+				$('#4').css('display','none');
+				$('#5').css('display','none');
+			} else if ($('#3').css('display') == 'none') {
+				$('#3').css('display','block');
+				$('#2').css('display','none');
+				$('#1').css('display','none');
+				$('#4').css('display','none');
+				$('#5').css('display','none');
+				$('#btn1').css('color','#b2b2b2');
+				$('#btn2').css('color','#b2b2b2');
+				$('#btn3').css('color','#00a587');
+				$('#btn4').css('color','#b2b2b2');
+				$('#btn5').css('color','#b2b2b2');
+			} 
+		}
+		function c4(){
+			if ($('#4').css('display')=='block') {
+				$('#2').css('display','none');
+				$('#3').css('display','none');
+				$('#1').css('display','none');
+				$('#5').css('display','none');
+			} else if ($('#4').css('display') == 'none') {
+				$('#4').css('display','block');
+				$('#2').css('display','none');
+				$('#3').css('display','none');
+				$('#1').css('display','none');
+				$('#5').css('display','none');
+				$('#btn1').css('color','#b2b2b2');
+				$('#btn2').css('color','#b2b2b2');
+				$('#btn3').css('color','#b2b2b2');
+				$('#btn4').css('color','#00a587');
+				$('#btn5').css('color','#b2b2b2');
+			} 
+		}
+		function c5(){
+			if ($('#5').css('display')=='block') {
+				$('#2').css('display','none');
+				$('#3').css('display','none');
+				$('#4').css('display','none');
+				$('#1').css('display','none');
+			} else if ($('#5').css('display') == 'none') {
+				$('#5').css('display','block');
+				$('#2').css('display','none');
+				$('#3').css('display','none');
+				$('#4').css('display','none');
+				$('#1').css('display','none');
+				$('#btn1').css('color','#b2b2b2');
+				$('#btn2').css('color','#b2b2b2');
+				$('#btn3').css('color','#b2b2b2');
+				$('#btn4').css('color','#b2b2b2');
+				$('#btn5').css('color','#00a587');
+			} 
+		}
+		$(function(){
+			$('#move').click(function(){
+				location.href="Controller?command=GoCenter";
+			})
+		})
+	</script>
+</head>
+<body>
+	<div class="main">
+		<div class="main flex tl" style="width:640px;height:50px;">
+		<img id="move"src=images/TM_LEFT.svg width="20px"height="20px"style="margin-left:13px">
+		</div>
+		<div class="main tl box">
+			<div class="box1 font28">
+				자주 묻는 질문
+			</div>
+			<div class="fl width" style="padding-top:14px">
+				<!-- <div class="fl width">
+					<div class="fl box2 width">
+						<img src="images/find.svg"width="16"height="16"style="margin:16px 10px 0px 16px">
+						<input type="text" placeholder="무엇을 찾고 계신가요?"/>
+					</div>
+				</div> -->
+			</div>
+			<div class="fl width box3">
+				<div class="fl font14 w33"onclick="c1()"id="btn1">
+					회원/계정
+				</div>
+				<div class="fl font14 w33"onclick="c2()"id="btn2">
+					거래사기
+				</div>
+				<div class="fl font14 w33"onclick="c3()"id="btn3">
+					운영정책
+				</div>
+				<div class="fl font14 w33"onclick="c4()"id="btn4">
+					판매광고
+				</div>
+				<div class="fl font14 w33"onclick="c5()"id="btn5">
+					이용방법
+				</div>
+				<div class="fl font14 w33">
+				
+				</div>
+			</div>
+			<ul class="fl width" id="1">
+				<span class="fl box4">
+					<a href="Controller?command=GoFaq_1"><!-- TM_FAQ/1.html -->
+						<li class="fl w90">회원정보 변경은 어디서 하나요?</li>
+						<img class="fr pd" src=images/TM_RIGHT.svg>
+					</a>
+					<a href="Controller?command=GoFaq_1_3"><!-- TM_FAQ/1-3.html -->
+						<li class="fl w90">계정은 몇 개까지 가능한가요?</li>
+						<img class="fr pd" src=images/TM_RIGHT.svg>
+					</a>
+					<a href="Controller?command=GoFaq_1_2"><!-- TM_FAQ/1-2.html -->
+						<li class="fl w90">회원탈퇴 후 재가입이 가능한가요?</li>
+						<img class="fr pd" src=images/TM_RIGHT.svg>
+					</a>
+				</span>
+			</ul>
+			<ul class="fl width hidden" id="2">
+				<span class="fl box4">
+					<a href="Controller?command=GoFaq_3"><!-- TM_FAQ/3.jsp -->
+						<li class="fl w90">[분쟁해결절차] 사기꾼의 주요 사기패턴 유형이 궁금해요.</li>
+						<img class="fr pd" src=images/TM_RIGHT.svg>
+					</a>
+					<a href="Controller?command=GoFaq_3_1"><!-- TM_FAQ/3-1.jsp -->
+						<li class="fl w90">[분쟁해결절차] 사기를 당하면 어떻게 처리해야 되나요?</li>
+						<img class="fr pd" src=images/TM_RIGHT.svg>
+					</a>
+					<a href="Controller?command=GoFaq_3_2"><!-- TM_FAQ/3-2.jsp -->
+						<li class="fl w90">[분쟁해결절차] 상품금액 입금 후, 판매자가 상품을 발송하지 않아요.</li>
+						<img class="fr pd" src=images/TM_RIGHT.svg>
+					</a>
+				</span>
+			</ul>
+			<ul class="fl width hidden"id="3">
+				<span class="fl box4">
+					<a href="Controller?command=GoFaq_2"><!-- TM_FAQ/2.jsp -->
+						<li class="fl w90">거래를 하면 안 되는 것들은 어떤 것이 있나요?</li>
+						<img class="fr pd" src=images/TM_RIGHT.svg>
+					</a>
+					<li class="fl w90">상품판매 시 신고증(허가증) 제출이 필요한 상품이 있나요?</li>
+					<img class="fr pd" src=images/TM_RIGHT.svg>
+					<li class="fl w90">통신판매업자일 경우 상품 판매에 필요한 절차가 있나요?</li>
+					<img class="fr pd" src=images/TM_RIGHT.svg>
+				</span>
+			</ul>
+			<ul class="fl width hidden"id="4">
+				<span class="fl box4">
+					<li class="fl w90">[UP하기] 예약 설정은 어떻게 하나요?</li>
+					<img class="fr pd" src=images/TM_RIGHT.svg>
+					<li class="fl w90">[UP하기] UP하기란 무엇인가요?</li>
+					<img class="fr pd" src=images/TM_RIGHT.svg>
+					<li class="fl w90">[UP하기] 환불은 어떻게 받을 수 있나요?</li>
+					<img class="fr pd" src=images/TM_RIGHT.svg>
+				</span>
+			</ul>
+			<ul class="fl width hidden"id="5">
+				<span class="fl box4">
+					<li class="fl w90">[번개장터 포장택배] 상품은 어떻게 전달 하나요?</li>
+					<img class="fr pd" src=images/TM_RIGHT.svg>
+					<li class="fl w90">[번개장터 포장택배] 번개장터 포장택배 서비스란 무엇인가요?</li>
+					<img class="fr pd" src=images/TM_RIGHT.svg>
+					<li class="fl w90">[내폰시세] 내폰시세 서비스란 무엇인가요?</li>
+					<img class="fr pd" src=images/TM_RIGHT.svg>
+				</span>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>

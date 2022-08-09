@@ -1,0 +1,184 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500&display=swap');
+body {
+	margin: 0px;
+}
+fl {
+	float: left;
+}
+fr {
+	float: right;
+}
+h2 {
+	font-family: Noto Sans KR;
+}
+button {
+    padding: 0px;
+    background: none;
+    border: none;
+    outline: 0px;
+}
+#sellerDealCt1 { /* 판매자에게 거래 요청 전체 div */
+	width: 100%;
+	height: 100;
+}
+#sellerDealCt2 { /* 판매자에게 거래 요청 스크롤바 div */
+	width: 640px;
+	height: 919px;
+	margin: auto;
+	margin-top: 50px; 
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+#sellerDealTitleFont { /* 판매자에게 거래를 요청했습니다 폰트 */
+	height: 65px;
+	padding-left: 17px;
+	margin: 0 0 13px 0;
+	font-size: 1.5rem;
+	line-height: 1.34;
+	color: rgb(30, 29, 41);  
+}
+#sellerDealCt3_1 { /* 상품사진, 상품정보, 거래자닉네임 전체 div */
+	width: 623px;
+	height: 134.5px;
+	border-bottom: 8px solid rgb(234, 233, 241);
+}
+#sellerDealCt3_2 {
+	display: flex;
+	width: 591px;
+	height: 44px;
+	align-items: center;
+	padding: 27.5px 16px 12px 16px;
+}
+#sellerDealCt3_3 {
+	display: flex;
+	height: 44px;
+	margin-left: 12px;
+}
+#sellerDealCt3_4 {
+	height: 100%;
+}
+#sellerDealCt3_5 { /* 제품명 */
+	height: 17.19px;
+	margin-top: 5px;
+	font-size: 15px;
+	line-height: 1.075rem;
+	margin: 0;
+  		color: rgb(114, 112, 127); 
+}
+#sellerDealCt3_6 {
+	display: flex;
+	height: 22.5px;
+	font-size: 15px;
+	align-items: center;
+	padding-left: 16px;
+}
+.dealProfileInquiryButton { /* 거래자 프로필 조회 */
+    text-decoration: underline; 
+    font-size: 15px;
+    color: rgb(30, 29, 41); 
+    cursor: pointer;
+}
+#deliveryChargeInclude {
+	position: relative;
+    margin-left: 1rem;
+/* 		    align-self: center; */
+    color: rgb(30, 29, 41);
+    font-size: 15px;
+}
+		#deliveryChargeInclude::before {
+	position: absolute;
+    left: -0.5rem;
+    top: 40%;
+    content: "";
+    display: inline-block;
+    width: 2px;
+    height: 2px;
+    background: rgb(30, 29, 41);
+    border-radius: 100%;
+}  
+#changeButton { /* 변경 버튼 */ 
+	width: 44px;
+	height: 17px;
+	margin-left: 8px; 
+	padding:0px;
+	font-size: 13px;
+	color: rgb(155, 153, 169); 
+	background: none;
+	border: none;
+	cursor: pointer;
+}
+#sellerDealCt4 {
+	width: 591px;
+	height: 152.75px;
+	padding: 0 16px;
+}
+#sellerDealCt4_1 { /* 배송지정보 전체 div */
+	width: 100%;
+	height: 89px;
+	padding: 32px 0 32px 0;
+	border-bottom: 1px solid rgb(234, 233, 241);
+}
+#phoneNumber { /* 핸드폰 번호 */
+	position: relative;
+    margin-left: 1rem;
+/* 		    align-self: center; */
+    color: rgb(30, 29, 41);
+}
+#phoneNumber::before {
+	position: absolute; 
+    left: -0.5rem; 
+    top: 40%;
+    content: "";
+    display: inline-block;
+    width: 2px;
+    height: 2px;
+    background: rgb(30, 29, 41);
+    border-radius: 100%;
+}
+#sellerDealCt5 { /* 거래취소 안내, 거래버튼 전체 div */
+	width: 624px;
+	height: 214px;
+	
+}
+#sellerDealCt5_1 {
+	width: 592px;
+	height: 152px; 
+	padding: 34px 16px;
+}
+.dealCancelButton { /* 거래 취소 버튼 */
+	width: 591px;
+	height: 41px;
+	font-size: 0.875rem; 
+	line-height: 2.5rem;
+	border-radius: 4px;
+	margin-top: 1rem;
+	border: 1px solid rgb(195, 194, 204);
+	cursor: pointer; 
+}
+#sellerDealDoneFont { /* 거래 완료 안내문 div */
+	margin-top: 2rem;
+	position: relative;
+	font-size: 13px;
+	color: rgb(155, 153, 169);
+	padding-left: 0.625rem; 
+}
+#sellerDealDoneFont::before {
+	position: absolute;
+    left: 2px;
+    top: 7px;
+    content: "";
+    display: inline-block;
+    width: 0.25rem;
+    height: 0.25rem;
+    background: rgb(220, 219, 228);
+    border-radius: 100%;
+}
+#sellerDealCt6 { /* 이용안내문 div */
+	width: 579px;
+	height: 47px;
+	padding: 22px;
+	font-size: 9px;
+	background-color: rgb(250, 250, 250);
+  		color: rgb(153, 153, 153);
+}
