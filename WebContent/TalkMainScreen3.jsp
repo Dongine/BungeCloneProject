@@ -19,7 +19,7 @@
 	CommentDao cDao = new CommentDao();
 	ChatDao crDao = new ChatDao();
 	DealingDao dlDao = new DealingDao();
-	int rnO = 0; // 임시 채팅창번호 = 0 (초기값일 뿐)
+	int rnO = 0;
 	
 	ArrayList<ChatRoomDto> listChatRoom = null;
 	ArrayList<RealTimeChatDto> listRealTimeChat = null;
@@ -59,7 +59,7 @@
 		} catch(NumberFormatException e) { }
 		
 		
-	 	if(productnumber_pk==0) {   // 메인 - [번개톡] 클릭한 상황.
+	 	if(productnumber_pk==0) {   // 메인화면에서 번개톡 진입시
 	 		if(crDao.countRno(NICKNAME_PK)==0) {
 				%>
 					<script>
@@ -100,12 +100,12 @@
 		 		 	countDealDone = dlDao.countDealDone(sellerFk);
 		 		}
 	 		}
-		} else {	// [연락하기] 클릭한 상황.
+		} else {	// 연락하기로 번개톡진입시
 			String strProductSelect = pDao.getSellerProduct(productnumber_pk);
-			String[] arrStrProductSelect = strProductSelect.split("/"); // 구분자
+			String[] arrStrProductSelect = strProductSelect.split("/"); 
 		
 			nicknameFk = arrStrProductSelect[0];
-			imagename = arrStrProductSelect[1]; // 에러
+			imagename = arrStrProductSelect[1];
 			productname = arrStrProductSelect[2];
 			price = Integer.parseInt(arrStrProductSelect[3]);
 			deliveryCharge = arrStrProductSelect[4];
@@ -431,14 +431,14 @@
 						<ul class="listUl">
 							<%
 								for(ChatRoomDto dto : listChatRoom) {
-									String strLastChat = crDao.getLastChat(dto.getRno());	// "아디다리도리다스의 거래가 취소되었어요."
+									String strLastChat = crDao.getLastChat(dto.getRno());
 									String strTemp = crDao.getLastChatTime(dto.getRno());
 									String strLastChatDate = "";
 									if(!"".equals(strTemp)) {
 										SimpleDateFormat sdfDB = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.0");
 										SimpleDateFormat sdfDiv = new SimpleDateFormat("M.dd");
 										java.util.Date date1 = sdfDB.parse(strTemp);
-										strLastChatDate = sdfDiv.format(date1);    // "5.20";
+										strLastChatDate = sdfDiv.format(date1); 
 									} 
 									String displayName = "";
 									if(dto.getPurchaseFk().equals(NICKNAME_PK)) {
@@ -458,7 +458,6 @@
 										</div>
 				
 										<div class="fl listContent4">
-											<!-- <span class="fl listMeIcon">나</span> -->
 											<%
 												if(strLastChat.equals("/;/구매자의_거래요청/;/")) { 
 													strLastChat="택배거래요청";
