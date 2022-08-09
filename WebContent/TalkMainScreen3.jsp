@@ -272,6 +272,7 @@
 				window.open("Controller?command=GoDealCancel&rno="+rno+'&dno='+dno);
 			});
 			
+			// 상품상세정보 이동
 			$(document).on('click',".chatProductInfoCt",function() {
 				location.href="Controller?command=GoProduct&productnumber_pk=<%=productnumber_pk%>";
 			});
@@ -305,7 +306,6 @@
 				var otherName = $("#rightInfoCt1_2").find("span div b").text();				
 				location.href="Controller?command=GoTM4&NICKNAME_PK="+otherName;
 			});
-			
 		});
 		
 		// 번개톡 채팅화면 우측중앙 닉네임 선택시 모달창 블록, 숨기기 
@@ -598,7 +598,7 @@
 							<div class="rightName3DotIconFont">신고</div>
 						</div>
 						<div class="rightName3DotIconsCt">
-							<a href='ReportHistroyInquiry.jsp' target='_blank'>
+							<a href='Controller?command=GoReportHistoryInquiry' target='_blank'>
 								<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22"><g fill="none" fill-rule="evenodd"><rect width="18" height="20" x="2" y="1" fill="#C3C2CC" rx="2"></rect><rect width="12" height="2" x="5" y="5" fill="#FFF" rx="1"></rect><rect width="12" height="2" x="5" y="10" fill="#FFF" rx="1"></rect><path fill="#FFF" d="M6 15h6a1 1 0 0 1 0 2H6a1 1 0 0 1 0-2z"></path></g></svg>
 								<div class="rightName3DotIconFont">신고조회</div>
 							</a>
