@@ -30,7 +30,6 @@ public class AccountServlet extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String account = request.getParameter("account");
-		//System.out.println("서버에 요청이 들어옴. account : " + account);
 		
 		BlockAccountDao bDao = new BlockAccountDao();
 		boolean result  = false;

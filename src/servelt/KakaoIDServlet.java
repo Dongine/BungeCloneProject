@@ -24,7 +24,6 @@ public class KakaoIDServlet extends HttpServlet {
 	//}
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String kakaoId = request.getParameter("kakaoId");
-		//System.out.println("서버에 요청이 들어옴. kakao_id : " + kakao_id);
 		
 		BlockKakaoIDDao bDao = new BlockKakaoIDDao();
 		boolean result  = false;
@@ -36,13 +35,12 @@ public class KakaoIDServlet extends HttpServlet {
 			e.printStackTrace();
 		}
 		
-		int ret = 0;  // 1이면 사기계좌, 0이면 정상계좌.
+		int ret = 0;  // 1이면 사기계좌, 0이면 정상계좌
 		if(result) {
 			ret = 1;
 		}
 		
-		// 이제, ret를 응답으로 실어서 보내면 돼. --> JSON.
-		response.setContentType("application/json");  // MIME
+		response.setContentType("application/json");
 		JSONObject obj = new JSONObject();
 		obj.put("result",ret);
 		

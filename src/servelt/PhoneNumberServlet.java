@@ -20,9 +20,6 @@ import com.bunge.dao.BlockPhoneNumberDao;
 public class PhoneNumberServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-//	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-//	}
-
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 			String phoneNumber = request.getParameter("phoneNumber");
 			//System.out.println("서버에 요청이 들어옴. phoneNumber : " + phoneNumber);
