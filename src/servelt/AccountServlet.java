@@ -24,9 +24,6 @@ import com.bunge.dao.DBConnection;
 @WebServlet("/AccountServlet")
 public class AccountServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-//	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-//	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String account = request.getParameter("account");
@@ -46,10 +43,9 @@ public class AccountServlet extends HttpServlet {
 			ret = 1;
 		}
 		
-		// 이제, ret를 응답으로 실어서 보내면 돼. --> JSON.
-		response.setContentType("application/json");  // MIME
+		response.setContentType("application/json");
 		JSONObject obj = new JSONObject();
-		obj.put("result",ret);
+		obj.put("result",ret); 
 		
 		PrintWriter out = response.getWriter();
 		out.println(obj);

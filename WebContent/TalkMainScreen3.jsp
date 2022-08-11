@@ -129,7 +129,7 @@
 	<link rel="shortcut icon" href="images/favicon.ico">
 	<script src="js/jquery-3.6.0.min.js"></script>
 	<script>
-		// Setup WebSocket.
+		// 채팅보내기
 		var webSocket = new WebSocket("ws://localhost:9090/Bunge5/broadcasting");
 		webSocket.onmessage = function(e) {
 			location.reload();
@@ -502,7 +502,7 @@
 					<div id="rightInfoCt1_2" onclick="nameModal_open()">
 						<span style="margin-right: 6px; letter-spacing: -0.5px;">
 							<%
-								if((rnO!=0)&&(category1 == "")) { // DIDI
+								if((rnO!=0)&&(category1 == "")) {
 									String strGetChatOtherNickname = crDao.getChatOtherNickname(rnO);
 									String[] arrGetChatOtherNickname = strGetChatOtherNickname.split("/");
 									String purchaseFk = arrGetChatOtherNickname[0]; // 구매자 닉네임
